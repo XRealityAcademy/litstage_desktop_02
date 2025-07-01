@@ -63,3 +63,12 @@ TestResults/
 
 # Auto-generated JetBrains Rider plugin
 .idea/
+
+# Burst debug info (safe to ignore)
+litstage_vr_BurstDebugInformation_DoNotShip/
+
+# APK build output (ignore built apps)
+*.apk
+
+# Unknown temp folder (unless you know you need it)
+.utmp/
