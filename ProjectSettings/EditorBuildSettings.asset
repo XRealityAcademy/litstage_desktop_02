@@ -6,34 +6,34 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Production/Scenes/Tutorial.unity
+    path: Assets/Production/Scenes/SCN_Tutorial.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
   - enabled: 1
-    path: Assets/Production/Scenes/Lab.unity
+    path: Assets/Production/Scenes/SCN_Lab.unity
     guid: 246a3b9e836064461a03e13f69f1012a
   - enabled: 0
-    path: Assets/Dominique/Scenes/Tutorial.unity
+    path: Assets/Dominique/Scenes/SCN_Tutorial.unity
     guid: 4221f5e51cbac49d1b7edd1f3cefd2e4
   - enabled: 0
-    path: Assets/Dominique/Scenes/Base.unity
+    path: Assets/Dominique/Scenes/SCN_Base.unity
     guid: 159a97735dbe545fe976d287cb3c2973
   - enabled: 0
-    path: Assets/Edwin/Scenes/Base.unity
+    path: Assets/Edwin/Scenes/SCN_Base.unity
     guid: f04779cee4fb54800ab235c3f8c8a04d
   - enabled: 0
-    path: Assets/Edwin/Scenes/Tutorial.unity
+    path: Assets/Edwin/Scenes/SCN_Tutorial.unity
     guid: 5b6142fba9d3d4b4bb858cd84a4dda7d
   - enabled: 0
-    path: Assets/Jacob/Scenes/Base.unity
+    path: Assets/Jacob/Scenes/SCN_Base.unity
     guid: 9359823649c8f493f85433ea2eed7a0e
   - enabled: 0
-    path: Assets/Jacob/Scenes/Tutorial.unity
+    path: Assets/Jacob/Scenes/SCN_Tutorial.unity
     guid: 0ffbc9e02728b43c6b7db7250d8edcd6
   - enabled: 0
-    path: Assets/Oliver/Scenes/Base.unity
+    path: Assets/Oliver/Scenes/SCN_Base.unity
     guid: 4e9fef26e6adb88479ad1b9834a32d94
   - enabled: 0
-    path: Assets/Oliver/Scenes/Tutorial.unity
+    path: Assets/Oliver/Scenes/SCN_Tutorial.unity
     guid: 54ed0f7c8f3fd4a8fabb8ca8c69f006e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
