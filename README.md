@@ -12,11 +12,11 @@ Our goal is to create interactive, engaging learning experiences that make educa
 # Requirements
 
 - **Disk space:** Approximately 22 GB free
-- **Unity 6:** [Download here](https://unity.com/download)
+- **Unity 6:** <a href="https://unity.com/download" target="_blank">Download here</a>
 - **Meta Quest headset:** Quest 3S or Quest 3
-- **Meta Quest Link cable:** [Official Link Cable](https://www.meta.com/us/es/quest/accessories/link-cable/?srsltid=AfmBOop8C9rl6ylWoMuKIhxQGdXsvsKxB_Ugqp3GsWJr-nE6z92YgiXl)
-- **GitHub Desktop:** [Download here](https://github.com/apps/desktop)
-- **Meta Horizon app:** : [Download here](https://horizon.meta.com)
+- **Meta Quest Link cable:** <a href="https://www.meta.com/us/es/quest/accessories/link-cable/?srsltid=AfmBOop8C9rl6ylWoMuKIhxQGdXsvsKxB_Ugqp3GsWJr-nE6z92YgiXl" target="_blank">Official Link Cable</a>
+- **GitHub Desktop:** <a href="https://github.com/apps/desktop" target="_blank">Download here</a>
+- **Meta Horizon app:** <a href="https://horizon.meta.com" target="_blank">Download here</a>
 
 
 
@@ -32,7 +32,7 @@ Our goal is to create interactive, engaging learning experiences that make educa
 
 ### Unity Installation
 
-1. Download Unity from the [official website](https://unity.com/download).
+1. Download Unity from the official website <a href="https://unity.com/download" target="_blank">Download here</a>
 2. After installing, open **Unity Hub**.
 3. Click on **Install Editor**.
 4. Select the version: `6000.1.9f1`.
@@ -53,7 +53,7 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
 
 #### Option 1: Using Git Commands
 
-[Video tutorial](https://www.youtube.com/shorts/_bzS2dwz-IM)
+<a href="https://www.youtube.com/shorts/_bzS2dwz-IM" target="_blank">Video tutorial</a>
 
 1. Open a terminal:  
    - On Windows: **Command Prompt (cmd)**
@@ -71,10 +71,9 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
 
 #### **Option 2: Using the GitHub Web UI**
 
-[Video tutorial](https://www.youtube.com/shorts/lZf1nrT6iZw)
+<a href="https://www.youtube.com/shorts/lZf1nrT6iZw" target="_blank">Video tutorial</a>
 
-
-1.	Go to https://github.com/XRealityAcademy/litstage_vr.git
+1.	Go to <a href="https://github.com/XRealityAcademy/litstage_vr.git" target="_blank">https://github.com/XRealityAcademy/litstage_vr.git</a>
 2.	Click the green Code button.
 3.	Select the HTTPS option and click the copy icon.
 4.	Open the GitHub Desktop application.
@@ -106,8 +105,8 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
 
 ### Meta Horizon Configuration
 
-- Enable Developer Mode on Meta Quest 3  
-  [Video tutorial (starts at 0:37)](https://www.youtube.com/watch?v=8WxK8QeaEIc)
+- Enable Developer Mode on Meta Quest 3 
+  <a href="https://www.youtube.com/watch?v=8WxK8QeaEIc" target="_blank">Video tutorial (starts at 0:37)</a>
 - Connect your Meta Quest 3 to your laptop with the Meta Quest Link cable
 
 ---
@@ -264,7 +263,7 @@ Our team works using branches for each developer.
 ## ✅ Commit Changes
 
 - Watch this excellent video guide (**from 2:29 to 3:00 only**):  
-  [How to Commit in Git](https://www.youtube.com/watch?v=g2XjJhrGGg4)
+  <a href="https://www.youtube.com/watch?v=g2XjJhrGGg4" target="_blank">How to Commit in Git</a>
 - Always write a clear description of what you changed.
 - **Tip:** Commit your changes often—even small working changes!  
   This way, if something goes wrong, we can easily roll back to a previous version.
@@ -275,7 +274,8 @@ Our team works using branches for each developer.
 
 - **ALWAYS commit your local changes** (with/without pushing) before updating your branch.
 - Watch this excellent video guide (**until minute 1:55**):  
-  [How to update your branch with main](https://www.youtube.com/watch?v=Btu0SuwPmz0)
+  
+  <a href="https://www.youtube.com/watch?v=Btu0SuwPmz0" target="_blank">How to update your branch with main</a>
 
 ---
 
@@ -296,6 +296,49 @@ Our team works using branches for each developer.
 > - Commit often  
 > - Keep your branch up to date  
 > - PR when ready and always describe your work!
+
+
+## 🎮 Industry Naming Conventions for Game Assets
+
+| Asset Type     | Prefix  | Example Name                     | Notes/Versioning                   |
+|----------------|---------|----------------------------------|------------------------------------|
+| Prefab         | P_      | P_PlayerCharacter                |                                    |
+| Model (Mesh)   | M_      | M_DeskWood, M_DeskWood_v2        | Add `_v2`, `_v3` for new versions  |
+| Static Mesh    | SM_     | SM_PropsCrate, SM_Car_v2         | Used in Unreal, optional for Unity |
+| Texture        | T_      | T_WallBrick_ALB                  | Use suffix for type (see below)    |
+| Material       | MAT_    | MAT_WallBrick                    |                                    |
+| Script         | (none)  | PlayerManager.cs                 | PascalCase, no prefix (Unity)      |
+| Animation      | A_      | A_EnemyRunCycle                  |                                    |
+| Audio          | AU_     | AU_ButtonClick                   |                                    |
+| Sprite         | SP_     | SP_HealthIcon                    |                                    |
+| Scene          | SCN_    | SCN_Lab, SCN_Tutorial            |                                    |
+| **Image/Logo/Icon** | **Logo_** / **Icon_** | Logo_LitStage_Green, Icon_LitStage | For branding, UI, or app icon     |
+
+### **Texture Suffixes:**
+| Suffix   | Meaning           | Example                |
+|----------|-------------------|------------------------|
+| _ALB     | Albedo/Diffuse    | T_WallBrick_ALB        |
+| _NRM     | Normal Map        | T_WallBrick_NRM        |
+| _RMA     | Rough/Met/AO      | T_WallBrick_RMA        |
+| _EMI     | Emission          | T_WallLamp_EMI         |
+| _OCC     | Occlusion         | T_WallBrick_OCC        |
+
+---
+
+### **Versioning Assets**
+- If you create an updated version of an asset (like a model), add a suffix:  
+  - `M_DeskWood_v2` (new version, keep the old for reference or rollback)
+  - `P_EnemyRobot_v3`
+- Use whole numbers (`_v2`, `_v3`) for **major revisions**.
+
+---
+
+#### **Examples**
+
+- Old model: `M_DoorIron`
+- New test version: `M_DoorIron_v2`
+- Prefab for new version: `P_DoorIron_v2`
+- Texture for new version: `T_DoorIron_ALB_v2`
 
 ## 📄 License
 
