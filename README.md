@@ -23,7 +23,7 @@ Our goal is to create interactive, engaging learning experiences that make educa
 # Project Information
 
 - **Unity version:** 6
-- **Build:** 6000.1.9f1
+- **Build:** 6000.0.52f1
 - **Template:** VR using OpenXR
 
 ---
@@ -35,7 +35,7 @@ Our goal is to create interactive, engaging learning experiences that make educa
 1. Download Unity from the official website <a href="https://unity.com/download" target="_blank">Download here</a>
 2. After installing, open **Unity Hub**.
 3. Click on **Install Editor**.
-4. Select the version: `6000.1.9f1`.
+4. Select the version: `6000.0.52f1`.
 5. Choose the following modules:
     - Visual Studio Code
     - Android Build Support
