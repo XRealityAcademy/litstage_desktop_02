@@ -135,11 +135,12 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
 4. Click **Build and Run**.
     - The first time, you’ll be prompted to save the build. Save it as `litstage_classroom`.
 5. Wait for Unity to build and deploy the app to your headset. Once finished, put on your Quest and play!
-6. After exploring the Meta example scenes, try running only your scene:
+6. Each time you select an example in the dashboard, wait for some seconds, don't click to fast
+7. After exploring the Meta example scenes, try running only your scene:
     - Deselect all example scenes and select only your own scene(s) in the scene list before building.
 
 **Notes:**
-
+- If the first time you don't see any scene loaded in your Hierarchy, please open the Samples-> Meta XR Interaction SDK Essentials->77.0.0->UnityXR Integration->Scenes->
 - The first scene includes Meta example content. Sometimes, the grip buttons may not work as expected—use your hands for interaction instead.
 - For future builds, use the shortcut:  
     - **Windows:** `Ctrl + B`  
