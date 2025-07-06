@@ -22,9 +22,13 @@ Our goal is to create interactive, engaging learning experiences that make educa
 
 # Project Information
 
-- **Unity version:** 6
-- **Build:** 6000.0.52f1
-- **Template:** VR using OpenXR
+- **Unity Version:** 6.0.0 (Build: 6000.0.52f1)
+- **Project Template:** Universal 3D (URP)
+- **Plugins/Packages Used:**
+  - Meta XR All-in-One SDK
+  - Meta XR Interaction SDK Essentials
+  - OpenXR Plugin
+  - Unity OpenXR Meta Integration
 
 ---
 
@@ -44,6 +48,8 @@ Our goal is to create interactive, engaging learning experiences that make educa
     - Web Build Support
 
 Note: you need to have enough space
+
+---
 
 ### ⚡️ Cloning the Project
 
@@ -80,24 +86,32 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
 5.	Go to File → Clone repository and paste the URL.
 6.	Select a folder where you want to save the project.
 
-
+---
 
 # ⚡️ Unity Configuration
 
 1. **Open Unity Hub and import the project:**
-    - Click the **Add** button
-    - Select **Add project from disk** and choose your project folder
-2. Open the Project
-
-3. Go to **File** menu → **Build Profiles**
-
-4. In the left menu, choose **Android** and click the **Switch Platform** button
-
-5. In the **Scene List**, select your scenes located in your folder
-
-6. Go to **File** → **Project Settings** → **XR Plug-in Management**
-
-7. Make sure the **OpenXR** option is checked
+    - Click the **Add** button.
+    - Select **Add project from disk** and choose your project folder.
+2. **Open the project.**
+3. **Switch build platform:**
+    - Go to **File** → **Build Profiles**.
+    - In the left menu, select **Android** and click **Switch Platform**.
+4. **Scene List:**
+    - By default, Meta example scenes are selected.  
+      If this is your first time, keep this configuration. You can change scenes later as needed.
+5. **Enable XR Plug-in Management:**
+    - Go to **File** → **Project Settings** → **XR Plug-in Management**.
+    - Make sure **OpenXR** is checked, as well as **Meta Quest feature group** and **Meta XR feature group**.
+6. **Configure OpenXR Profiles:**
+    - Go to **File** → **Project Settings** → **XR Plug-in Management** → **OpenXR**.
+    - Under **Enabled Interaction Profiles**, ensure you have:
+        - **Meta Quest Touch Pro Controller Profile**
+        - **Oculus Touch Controller Profile**
+7. **Run Meta XR Project Setup Tool:**
+    - At the top of Unity, click the **Meta XR Tools** dropdown.
+    - Click **Project Setup Tool**, then click **Apply All** or **Apply**.
+    - **Tip:** Run this tool frequently! It will fix or configure your dependencies as you add/remove XR packages or features.
 
 ---
 
@@ -113,17 +127,25 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
 
 # ▶️ Run the Game
 
-1. Go to **File** → **Build Profiles** → **Android**
-2. Choose your scene (use **Open Scene List**)
-3. In **Platform Settings**, set **Run Device** to **Oculus Quest 3**
-4. Click **Build and Run**
+> **IMPORTANT:** Play the game in a room with enough space. Make sure your play area is clear to avoid any accidents or damage.
 
-**Note:**  
-- The first time, you’ll be asked to save the game build. Save it as `litstage_classroom`.
+1. Go to **File** → **Build Profiles** → **Android**.
+2. In the **Open Scene List**, for your first build, keep the default scenes. This lets you review the Meta example components. Later, you can select only your own scenes.
+3. In **Platform Settings**, set **Run Device** to **Oculus Quest 3** (or the name of your connected Quest device).
+4. Click **Build and Run**.
+    - The first time, you’ll be prompted to save the build. Save it as `litstage_classroom`.
+5. Wait for Unity to build and deploy the app to your headset. Once finished, put on your Quest and play!
+6. After exploring the Meta example scenes, try running only your scene:
+    - Deselect all example scenes and select only your own scene(s) in the scene list before building.
+
+**Notes:**
+
+- The first scene includes Meta example content. Sometimes, the grip buttons may not work as expected—use your hands for interaction instead.
 - For future builds, use the shortcut:  
-  - **Windows:** `Ctrl + B`  
-  - **Mac:** `Command + B`
+    - **Windows:** `Ctrl + B`  
+    - **Mac:** `Command + B`
 
+---
 
 # 📁 Folder Structure
 
@@ -224,13 +246,14 @@ Assets/
 
 
 ```
-⸻
+
 
 Workflow Summary:
 * Work in your personal folder.
 * When ready for review, move your work to Shared/.
 * After approval, leads/integrators will move approved content to Production folder
 
+---
 
 ## 🚦 Git Flow
 
@@ -252,15 +275,14 @@ Our team works using branches for each developer.
 
 
 
+---
 # 🚀 GIT Daily Commands
 
----
 > ### ⚡️ **Pull often!**
 > The longer you go without syncing, the worse merge conflicts get.
----
----
 
-## ✅ Commit Changes
+
+### ✅ Commit Changes
 
 - Watch this excellent video guide (**from 2:29 to 3:00 only**):  
   <a href="https://www.youtube.com/watch?v=g2XjJhrGGg4" target="_blank">How to Commit in Git</a>
@@ -268,18 +290,16 @@ Our team works using branches for each developer.
 - **Tip:** Commit your changes often—even small working changes!  
   This way, if something goes wrong, we can easily roll back to a previous version.
 
----
 
-## 🔄 Update Your Branch with the Latest Changes from Main
+### 🔄 Update Your Branch with the Latest Changes from Main
 
 - **ALWAYS commit your local changes** (with/without pushing) before updating your branch.
 - Watch this excellent video guide (**until minute 1:55**):  
   
   <a href="https://www.youtube.com/watch?v=Btu0SuwPmz0" target="_blank">How to update your branch with main</a>
 
----
 
-## 🚩 Create a Pull Request
+### 🚩 Create a Pull Request
 
 1. Open the GitHub website and go to your repository.
 2. Click the **Pull requests** tab.
@@ -290,12 +310,15 @@ Our team works using branches for each developer.
 6. Add a description of your changes (e.g., new models, textures, animations, bug fixes, etc.).
 7. Ask to review the pull before merge it to the main branch
 
----
 
 > **Remember:**  
 > - Commit often  
 > - Keep your branch up to date  
 > - PR when ready and always describe your work!
+
+---
+
+
 
 
 ## 🎮 Industry Naming Conventions for Game Assets
