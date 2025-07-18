@@ -22,13 +22,8 @@ Our goal is to create interactive, engaging learning experiences that make educa
 
 # Project Information
 
-- **Unity Version:** 6.0.0 (Build: 6000.0.52f1)
-- **Project Template:** Universal 3D (URP)
-- **Plugins/Packages Used:**
-  - Meta XR All-in-One SDK
-  - Meta XR Interaction SDK Essentials
-  - OpenXR Plugin
-  - Unity OpenXR Meta Integration
+- **Unity Version:** 6.0.0 (Build: 6000.0.53f1)
+- **Project Template:** VR using OpenXR
 
 ---
 
@@ -39,7 +34,7 @@ Our goal is to create interactive, engaging learning experiences that make educa
 1. Download Unity from the official website <a href="https://unity.com/download" target="_blank">Download here</a>
 2. After installing, open **Unity Hub**.
 3. Click on **Install Editor**.
-4. Select the version: `6000.0.52f1`.
+4. Select the version: `6000.0.53f1`.
 5. Choose the following modules:
     - Visual Studio Code
     - Android Build Support
@@ -98,20 +93,14 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
     - Go to **File** → **Build Profiles**.
     - In the left menu, select **Android** and click **Switch Platform**.
 4. **Scene List:**
-    - By default, Meta example scenes are selected.  
+    - By default, SCN_Tutorial example scenes are selected.  
       If this is your first time, keep this configuration. You can change scenes later as needed.
 5. **Enable XR Plug-in Management:**
     - Go to **File** → **Project Settings** → **XR Plug-in Management**.
-    - Make sure **OpenXR** is checked, as well as **Meta Quest feature group** and **Meta XR feature group**.
+    - Make sure **OpenXR** is checked.
 6. **Configure OpenXR Profiles:**
-    - Go to **File** → **Project Settings** → **XR Plug-in Management** → **OpenXR**.
-    - Under **Enabled Interaction Profiles**, ensure you have:
-        - **Meta Quest Touch Pro Controller Profile**
-        - **Oculus Touch Controller Profile**
-7. **Run Meta XR Project Setup Tool:**
-    - At the top of Unity, click the **Meta XR Tools** dropdown.
-    - Click **Project Setup Tool**, then click **Apply All** or **Apply**.
-    - **Tip:** Run this tool frequently! It will fix or configure your dependencies as you add/remove XR packages or features.
+    - Go to **File** → **Project Settings** → **XR Plug-in Management** .
+    - Make sure the OpenXR option is checked
 
 ---
 
@@ -130,18 +119,18 @@ You can clone this repository using either **Git commands** or the **GitHub Desk
 > **IMPORTANT:** Play the game in a room with enough space. Make sure your play area is clear to avoid any accidents or damage.
 
 1. Go to **File** → **Build Profiles** → **Android**.
-2. In the **Open Scene List**, for your first build, keep the default scenes. This lets you review the Meta example components. Later, you can select only your own scenes.
+2. In the **Open Scene List**, for your first build, keep the default scenes. This lets you review the OpenXR example components. Later, you can select only your own scenes.
 3. In **Platform Settings**, set **Run Device** to **Oculus Quest 3** (or the name of your connected Quest device).
 4. Click **Build and Run**.
     - The first time, you’ll be prompted to save the build. Save it as `litstage_classroom`.
 5. Wait for Unity to build and deploy the app to your headset. Once finished, put on your Quest and play!
 6. Each time you select an example in the dashboard, wait for some seconds, don't click to fast
-7. After exploring the Meta example scenes, try running only your scene:
+7. After exploring the OpenXR example scenes, try running only your scene:
     - Deselect all example scenes and select only your own scene(s) in the scene list before building.
 
 **Notes:**
-- If the first time you don't see any scene loaded in your Hierarchy, please open the Samples-> Meta XR Interaction SDK Essentials->77.0.0->UnityXR Integration->Scenes->
-- The first scene includes Meta example content. Sometimes, the grip buttons may not work as expected—use your hands for interaction instead.
+- If the first time you don't see any scene loaded in your Hierarchy, please open the Assets-> Production -> Scenes -> SCN_Tutorial
+- The first scene includes OpenXR example content. 
 - For future builds, use the shortcut:  
     - **Windows:** `Ctrl + B`  
     - **Mac:** `Command + B`
@@ -174,6 +163,7 @@ Assets/
 ├── Production/                  # Only approved, final game content (art, code, scenes)
 │   ├── Art/
 │   │   ├── Textures/
+│   │   ├── Images/
 │   │   ├── Sprites/
 │   │   ├── Models/
 │   │   ├── Materials/
@@ -189,6 +179,7 @@ Assets/
 ├── Shared/                      # For work ready for team review/testing
 │   ├── Art/
 │   │   ├── Textures/
+│   │   ├── Images/
 │   │   ├── Sprites/
 │   │   ├── Models/
 │   │   ├── Materials/
@@ -200,6 +191,7 @@ Assets/
 ├── Oliver/                      # Oliver's personal workspace
 │   ├── Art/
 │   │   ├── Textures/
+│   │   ├── Images/
 │   │   ├── Sprites/
 │   │   ├── Models/
 │   │   ├── Materials/
@@ -212,6 +204,7 @@ Assets/
 ├── Jacob/                       # Jacob's personal workspace
 │   ├── Art/
 │   │   ├── Textures/
+│   │   ├── Images/
 │   │   ├── Sprites/
 │   │   ├── Models/
 │   │   ├── Materials/
@@ -224,6 +217,7 @@ Assets/
 ├── Dominique/                   # Dominique's personal workspace
 │   ├── Art/
 │   │   ├── Textures/
+│   │   ├── Images/
 │   │   ├── Sprites/
 │   │   ├── Models/
 │   │   ├── Materials/
@@ -236,6 +230,7 @@ Assets/
 └── Edwin/                       # Edwin's personal workspace
     ├── Art/
     │   ├── Textures/
+│   │   ├── Images/
     │   ├── Sprites/
     │   ├── Models/
     │   ├── Materials/
