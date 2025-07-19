@@ -23832,12 +23832,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a34f51538c3b47a4e9f4f46add1db7e9, type: 3}
   - {fileID: 8300000, guid: 14be3252638fa7b468f8e29efd0efbb7, type: 3}
   - {fileID: 8300000, guid: b301baff6f4be2b459a0955713412595, type: 3}
+  - {fileID: 8300000, guid: 663adeb000429a64a94423001dfb21e3, type: 3}
+  - {fileID: 8300000, guid: 92bce23831cca1841b021697cb55ca2e, type: 3}
+  - {fileID: 8300000, guid: 7d04ef4690bcd4845a851eefb25ec6ae, type: 3}
+  - {fileID: 8300000, guid: e707c738421a7c14995457a2d49a2afe, type: 3}
+  - {fileID: 8300000, guid: d43d2e0562104be4ba4556bbad7042a7, type: 3}
+  - {fileID: 8300000, guid: 6301b8c95b20a804fa36e6b3da1f6206, type: 3}
   dialogLines:
   - "Hi, Brave soul\u2014welcome aboard!"
   - "I\u2019m Lula. It\u2019s good to see you here."
   - "I\u2019ve stumbled upon this mysterious substance here in the Amazon, and need
     help testing it\u2019s properties."
   - "Let\u2019s head over to the workstation on the right, so I can show you."
+  - So, here are our tools. You can grab some tools and familiarize yourself with
+    them.
+  - There are six pots with soil.
+  - "Ah! Yes! That is the mysterious substance I found here in the Amazon. I\u2019m
+    keen to see its properties."
+  - 'The passionflower is a tropical climbing plant with stunning,
+
+    intricate
+    blooms that look like living mandalas.
+
+'
+  - "The ruler! We\u2019ll use this to measure the height of our plants after some
+    time has passed."
+  - "Now that you\u2019ve familiarized yourself with our tools, let\u2019s start
+    the experiment!"
   continueButton: {fileID: 3409566789716954863}
 --- !u!4 &2109911001
 Transform:
