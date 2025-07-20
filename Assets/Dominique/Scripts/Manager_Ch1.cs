@@ -39,7 +39,7 @@ public class Manager_Ch1 : MonoBehaviour
             dialogText.text = dialogLines[i];
             audioSource.clip = dialogClips[i];
             audioSource.Play();
-            yield return new WaitForSeconds(3f); // Audio duration
+            yield return new WaitForSeconds(4f); // Audio duration
             audioSource.Stop();
             yield return new WaitForSeconds(1f); // Pause between dialogs
         }
