@@ -10,6 +10,7 @@ TagManager:
   - Dialog7Trigger
   - Dialog8Trigger
   - Dialog9Trigger
+  - Dialog10Trigger
   layers:
   - Default
   - TransparentFX
