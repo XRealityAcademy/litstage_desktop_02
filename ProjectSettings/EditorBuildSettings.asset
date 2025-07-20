@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Production/Scenes/SCN_Tutorial.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
   - enabled: 0
@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Oliver/Scenes/SCN_Tutorial.unity
     guid: 54ed0f7c8f3fd4a8fabb8ca8c69f006e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Dominique/Scenes/SCN_Chapter_01.unity
     guid: 80afd9c751200c749873570b97136b88
   m_configObjects:
