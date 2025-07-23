@@ -60,4 +60,63 @@ public static class EventFunctions
             Debug.Log($"EDWIN_DEBUG: Tried to remove listener for event not in table: {eventName} ({listener.Method.DeclaringType}.{listener.Method.Name})");
         }
     }
+
+    // ---- GENERIC EVENTS ----
+    private static Dictionary<string, Delegate> genericEventTable = new Dictionary<string, Delegate>();
+
+    public static void SendEvent<T>(string eventName, T data)
+    {
+        Debug.Log($"EDWIN_DEBUG: Sending event with data: {eventName} - Type: {typeof(T)}");
+        if (genericEventTable.TryGetValue(eventName, out var thisEvent))
+        {
+            var typedEvent = thisEvent as Action<T>;
+            if (typedEvent != null)
+            {
+                try
+                {
+                    typedEvent.Invoke(data);
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError($"EDWIN_DEBUG: Exception while invoking event '{eventName}': {ex}");
+                }
+            }
+        }
+        else
+        {
+            Debug.Log($"EDWIN_DEBUG: No listeners found for data event: {eventName}");
+        }
+    }
+
+    public static void ListenEvent<T>(string eventName, Action<T> listener)
+    {
+        if (genericEventTable.TryGetValue(eventName, out var thisEvent))
+        {
+            genericEventTable[eventName] = Delegate.Combine(thisEvent, listener);
+            Debug.Log($"EDWIN_DEBUG: Added data-listener to event: {eventName} - Listener count: {genericEventTable[eventName]?.GetInvocationList().Length}");
+        }
+        else
+        {
+            genericEventTable[eventName] = listener;
+            Debug.Log($"EDWIN_DEBUG: Created new data-event entry for: {eventName}");
+        }
+    }
+
+    public static void RemoveListener<T>(string eventName, Action<T> listener)
+    {
+        if (genericEventTable.TryGetValue(eventName, out var thisEvent))
+        {
+            genericEventTable[eventName] = Delegate.Remove(thisEvent, listener);
+            Debug.Log($"EDWIN_DEBUG: Removed data-listener for event: {eventName} - Remaining listeners: {genericEventTable[eventName]?.GetInvocationList().Length}");
+            if (genericEventTable[eventName] == null)
+            {
+                genericEventTable.Remove(eventName);
+                Debug.Log($"EDWIN_DEBUG: No more data-listeners for event: {eventName}, removed from table.");
+            }
+        }
+        else
+        {
+            Debug.Log($"EDWIN_DEBUG: Tried to remove data-listener for event not in table: {eventName}");
+        }
+    }
 }
