@@ -9,6 +9,7 @@ public class TriggerDialog : MonoBehaviour
 
     [Tooltip("If left blank, we auto‑find Manager_Ch1 at runtime.")]
     public Manager_Ch1 manager;
+    public Outline outline;
 
     bool fired;
 
@@ -30,6 +31,7 @@ public class TriggerDialog : MonoBehaviour
         if (manager == null) return;
 
         manager.PlayDialogByIndex(dialogIndex);
+        //outline.OutlineColor = Color.red;
         fired = true;                      // lock out repeats
     }
 }
