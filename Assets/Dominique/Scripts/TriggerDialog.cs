@@ -1,37 +1,58 @@
-// TriggerDialog.cs  (drop this in Assets/Scripts)
 using UnityEngine;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider))]
 public class TriggerDialog : MonoBehaviour
 {
-    [Tooltip("Which dialog index? 0‑9. 4 = first optional waypoint (Dialog 5).")]
+    [Tooltip("Dialog index 0-9 (4 = Dialog 5).")]
     public int dialogIndex = 4;
 
-    [Tooltip("If left blank, we auto‑find Manager_Ch1 at runtime.")]
+    [Tooltip("Assign Manager_Ch1 or leave empty to auto-find.")]
     public Manager_Ch1 manager;
-    public Outline outline;
 
-    bool fired;
+    [Header("Ray & Grab")]
+    public Transform         rightRayOrigin;   // controller transform
+    public CustomInputAction rightHandInput;   // exposes IsGrabPressed
+    [SerializeField] float   maxRayDistance = 10f;
+
+    /*───────── Internals ─────────*/
+    LayerMask dialogMask;          // DialogTrigger layer
+    bool      fired;
 
     void Awake()
     {
-        // Ensure this collider is a trigger
+        // Ensure collider is Trigger
         GetComponent<Collider>().isTrigger = true;
 
-        // Find the manager automatically if not set
+        dialogMask = LayerMask.GetMask("DialogTrigger");
         if (manager == null) manager = FindObjectOfType<Manager_Ch1>();
-        if (manager == null)
-            Debug.LogError($"{name}: Manager_Ch1 not found in scene!");
     }
 
+    /*── Body walk-through ─*/
     void OnTriggerEnter(Collider other)
     {
-        if (fired) return;                 // only once
-        if (!other.CompareTag("Player")) return;
-        if (manager == null) return;
+        if (!fired && other.CompareTag("Player")) Activate();
+    }
 
+    /*── Ray + grab combo ─*/
+    void Update()
+    {
+        if (fired || !rightRayOrigin || !rightHandInput || !rightHandInput.IsGrabPressed) return;
+
+        if (Physics.Raycast(rightRayOrigin.position, rightRayOrigin.forward,
+                            out var hit, maxRayDistance, dialogMask,
+                            QueryTriggerInteraction.Collide) &&
+            hit.collider == GetComponent<Collider>())
+        {
+            Activate();
+        }
+    }
+
+    /*── Fire dialog, let Manager swap outline ─*/
+    void Activate()
+    {
+        if (fired || manager == null) return;
+        fired = true;
         manager.PlayDialogByIndex(dialogIndex);
-        //outline.OutlineColor = Color.red;
-        fired = true;                      // lock out repeats
     }
 }

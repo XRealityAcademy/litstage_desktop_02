@@ -2,22 +2,10 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-/// <summary>
-/// Manages a 10-line dialog + a red-outline baton that hops across six items.
-/// ─────────────────────────────────────────────────────────────────────────
-/// • Dialog 0-3 autoplay at Start().
-/// • Dialog 4-9 (indices 4–9) are triggered by TriggerDialog.cs
-///   which simply calls <see cref="PlayDialogByIndex(int)"/>.
-/// • As each dialog fires, the matching item’s outline turns red and the
-///   previous item’s outline is set to OutlineHidden.
-/// • After dialog 9 (player-visible “Dialog 10”) the Continue button appears.
-/// </summary>
 public class Manager_Ch1 : MonoBehaviour
 {
-    /*──────────────────── Outline Enum & Map ────────────────────*/
-    public enum Item { Pot, Seed, X, Ruler, WaterCan, ChatBot }
-
-    [Header("Item Outlines (assign in Inspector)")]
+    /*──────── Outline refs ───────*/
+    [Header("Item Outlines")]
     public Outline potOutline;
     public Outline seedOutline;
     public Outline xOutline;
@@ -25,10 +13,10 @@ public class Manager_Ch1 : MonoBehaviour
     public Outline waterCanOutline;
     public Outline chatBotOutline;
 
-    private Outline[] outlines; // length 6
-    private int       currentItemIndex = -1; // none yet
+    Outline[] outlines;
+    int       currentItemIndex = -1;   // <- starts at “none”
 
-    /*──────────────────── Dialog Fields ─────────────────────────*/
+    /*──────── Dialog UI / Audio ───*/
     [Header("UI & Audio")]
     public TMP_Text    dialogText;
     public AudioSource audioSource;
@@ -38,29 +26,29 @@ public class Manager_Ch1 : MonoBehaviour
     public string[]    dialogLines = new string[10];
 
     public GameObject continueButton;
-
     readonly bool[] played = new bool[10];
 
-    /*──────────────────── Setup ─────────────────────────────────*/
+    /*──────── Constants ───────────*/
+    static readonly Color Pink = ParseHex("#FF0047");
+    const float ActiveWidth = 10f, HiddenWidth = 0f;
+
+    /*──────── Awake ───────────────*/
     void Awake()
     {
-        // pack outline array for easy indexing
-        outlines = new[]
-        {
+        outlines = new[] {
             potOutline, seedOutline, xOutline,
             rulerOutline, waterCanOutline, chatBotOutline
         };
 
-        // validate
         if (dialogClips.Length != 10 || dialogLines.Length != 10)
         {
-            Debug.LogError("Manager_Ch1: need EXACTLY 10 clips and 10 lines.");
+            Debug.LogError("Manager_Ch1: need EXACTLY 10 clips + 10 lines.");
             enabled = false;
+            return;
         }
 
-        // ensure all outlines start hidden
-        foreach (var o in outlines)
-            SetOutlineHidden(o);
+        // Hide every outline; none are shown until Dialog 5 triggers
+        foreach (var o in outlines) SetOutlineHidden(o);
     }
 
     void Start()
@@ -69,26 +57,23 @@ public class Manager_Ch1 : MonoBehaviour
         StartCoroutine(AutoplayFirstFour());
     }
 
-    /*──────────────────── Public API ────────────────────────────*/
+    /*──────── Public API ─────────*/
     public void PlayDialogByIndex(int index) => TryPlay(index);
 
-    /*──────────────────── Internals ─────────────────────────────*/
+    /*──────── Internals ──────────*/
     void TryPlay(int idx)
     {
-        if (idx < 0 || idx >= played.Length) return;
-        if (played[idx])                    return;
+        if (idx < 0 || idx >= played.Length || played[idx]) return;
 
-        // swap outlines if idx maps to an item (4-9)
-        if (idx >= 4 && idx <= 9)
-            SwitchOutline(idx - 4);         // map 4→0, 5→1, …
+        // Show corresponding item outline for Dialog 5-10
+        if (idx >= 4 && idx <= 9) SwitchOutline(idx - 4);
 
         StartCoroutine(PlayLine(idx));
     }
 
     IEnumerator AutoplayFirstFour()
     {
-        for (int i = 0; i < 4; i++)
-            yield return PlayLine(i);
+        for (int i = 0; i < 4; i++) yield return PlayLine(i);
     }
 
     IEnumerator PlayLine(int idx)
@@ -109,32 +94,36 @@ public class Manager_Ch1 : MonoBehaviour
         if (idx == 9 && continueButton) continueButton.SetActive(true);
     }
 
-    /*──────────────────── Outline Helpers ──────────────────────*/
+    /*──────── Outline helpers ────*/
     void SwitchOutline(int newIndex)
     {
-        // hide previous
         if (currentItemIndex >= 0 && currentItemIndex < outlines.Length)
             SetOutlineHidden(outlines[currentItemIndex]);
 
-        // show new
         currentItemIndex = newIndex;
         if (currentItemIndex >= 0 && currentItemIndex < outlines.Length)
             SetOutlineRed(outlines[currentItemIndex]);
     }
 
-    static void SetOutlineRed(Outline o)
+    void SetOutlineRed(Outline o)
     {
         if (!o) return;
-        o.OutlineColor = Color.red;
+        o.OutlineColor = Pink;
+        o.OutlineWidth = ActiveWidth;
         o.OutlineMode  = Outline.Mode.OutlineAll;
         o.enabled      = true;
     }
 
-    static void SetOutlineHidden(Outline o)
+    void SetOutlineHidden(Outline o)
     {
         if (!o) return;
-        o.OutlineMode = Outline.Mode.OutlineHidden;
-        // optionally disable component entirely:
-        // o.enabled = false;
+        o.OutlineWidth = HiddenWidth;
+        o.OutlineMode  = Outline.Mode.OutlineHidden;
+        o.enabled      = true;
+    }
+
+    static Color ParseHex(string hex)
+    {
+        Color c; ColorUtility.TryParseHtmlString(hex, out c); return c;
     }
 }
