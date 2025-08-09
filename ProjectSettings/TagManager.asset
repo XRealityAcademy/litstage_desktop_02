@@ -11,6 +11,7 @@ TagManager:
   - Dialog8Trigger
   - Dialog9Trigger
   - Dialog10Trigger
+  - Table
   layers:
   - Default
   - TransparentFX
