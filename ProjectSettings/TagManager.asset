@@ -5,12 +5,18 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Dialog5Trigger
+  - Dialog6Trigger
+  - Dialog7Trigger
+  - Dialog8Trigger
+  - Dialog9Trigger
+  - Dialog10Trigger
   - Table
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - DialogTrigger
   - Water
   - UI
   - 
