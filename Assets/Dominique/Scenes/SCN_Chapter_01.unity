@@ -27339,6 +27339,22 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e707c738421a7c14995457a2d49a2afe, type: 3}
   - {fileID: 8300000, guid: d43d2e0562104be4ba4556bbad7042a7, type: 3}
   - {fileID: 8300000, guid: 6301b8c95b20a804fa36e6b3da1f6206, type: 3}
+  - {fileID: 8300000, guid: b5c228ffbc9e4c74e946466ef9e1b987, type: 3}
+  - {fileID: 8300000, guid: b7d172cd449ccf6408f0e9b71ac3b3dc, type: 3}
+  - {fileID: 8300000, guid: 1e0d4f246cff60a40a1a5cf88823cf05, type: 3}
+  - {fileID: 8300000, guid: f824015212d4b2748a367354303a35f6, type: 3}
+  - {fileID: 8300000, guid: 65ede1e2cdc343c49ba57126a6707cad, type: 3}
+  - {fileID: 8300000, guid: a6123289d34b7974393da7744ab99c89, type: 3}
+  - {fileID: 8300000, guid: 27f1a469656718642af5f75d76a577c4, type: 3}
+  - {fileID: 8300000, guid: f68ef57f90781e24e9dff2d0c375d24a, type: 3}
+  - {fileID: 8300000, guid: abc1b618dc906da4db889af59599e397, type: 3}
+  - {fileID: 8300000, guid: c14f3532aeb59f84cabae9128822568d, type: 3}
+  - {fileID: 8300000, guid: 50c0238aa65644941ac8fe192c038751, type: 3}
+  - {fileID: 8300000, guid: fe1abfd6988216147915d4b72742b41c, type: 3}
+  - {fileID: 8300000, guid: d722e57dabd746c40842bf38df84d5cb, type: 3}
+  - {fileID: 8300000, guid: 709a972c4b11bf24783bab025d57067c, type: 3}
+  - {fileID: 8300000, guid: 8e8f15d4085178d4f8b2cfa1643e3df6, type: 3}
+  - {fileID: 8300000, guid: 45e948711f4b28449824eed0d5d909cf, type: 3}
   dialogLines:
   - "Hi, Brave soul\u2014welcome aboard!"
   - "I\u2019m Lula. It\u2019s good to see you here."
@@ -27360,6 +27376,30 @@ MonoBehaviour:
     time has passed."
   - "Now that you\u2019ve familiarized yourself with our tools, let\u2019s start
     the experiment!"
+  - Now, pick up a seed on the table.
+  - Now, add one seed to each pot of soil.
+  - Grab the watering can, and then  water the plants.
+  - "Great job! Now, let\u2019s learn how to form our first hypothesis."
+  - Science is built on observation and measurement.rt the experiment!
+  - 'The scientific method generally consists of 4 steps:'
+  - "Step 1:\_ Observation \u2013 When a certain pattern or phenomenon of interest
+    is observed, which leads to a question such as, \u201CWhat could explain this
+    observation?\u201D"
+  - "Step 2: Hypothesis \u2013 Propose a possible explanation for the observation,
+    grounded in facts and reasoning."
+  - "Step 3: Experiment \u2013 Test one variable to answer your question and confirm
+    or revise your hypothesis."
+  - "Step 4: Conclusion \u2013 Present your data clearly so others can understand
+    your findings."
+  - "Let\u2019s focus on forming a hypothesis. A good hypothesis should:"
+  - "a. Uses objective, clearly defined terms\Lb. Is based on observations\Lc. Can
+    be disproven by observations (\u201Cfalsifiable\u201D)\Ld. Can be tested through
+    experiments (\u201Ctestable\u201D)"
+  - 'For example, a good hypothesis might be:'
+  - The more Compound X a plant receives,  the more it will grow.
+  - "A good hypothesis doesn\u2019t need to be right\u2014only clear, testable, and
+    informative."
+  - "Now, let\u2019s practice creating a good hypothesis."
   continueButton: {fileID: 3409566789716954863}
 --- !u!4 &2109911001
 Transform:
