@@ -11,6 +11,8 @@ TagManager:
   - Dialog8Trigger
   - Dialog9Trigger
   - Dialog10Trigger
+  - Seed
+  - WaterZone
   layers:
   - Default
   - TransparentFX

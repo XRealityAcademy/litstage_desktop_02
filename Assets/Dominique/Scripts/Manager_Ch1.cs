@@ -5,8 +5,21 @@ using TMPro;
 public class Manager_Ch1 : MonoBehaviour
 {
     /*──────── Tunables ───────────*/
-    private const int TOTAL = 26;     // <- ✨ Updated: total dialog/clip count
-    [Range(1, 10)] public int firstAutoCount = 4; // how many to autoplay at start
+    private const int TOTAL = 26;                        // 0..25
+    [Range(1, 10)] public int firstAutoCount = 4;        // autoplay at start
+
+    [Header("Gameplay Gating")]
+    [Tooltip("How many pots must receive seeds after index 10.")]
+    public int requiredSeedPots = 6;
+
+    [Tooltip("Seconds to wait between index 11 and 12.")]
+    public float delayBeforeIndex12 = 5f;
+
+    [Header("Tags (must match your scene)")]
+    [Tooltip("Tag assigned to seed GameObjects (with Rigidbody + non-trigger collider).")]
+    public string seedTag = "Seed";
+    [Tooltip("Tag assigned to the watering trigger volume / zone.")]
+    public string wateringTriggerTag = "WaterZone";
 
     /*──────── Outline refs ───────*/
     [Header("Item Outlines")]
@@ -32,11 +45,18 @@ public class Manager_Ch1 : MonoBehaviour
     public GameObject continueButton;
     readonly bool[] played = new bool[TOTAL];
 
+    /*──────── Progress State ─────*/
+    int   seedsPlacedCount = 0;
+    bool  waitingForSeeds  = false; // becomes true after index 10 finishes
+    bool  waitingForWater  = false; // becomes true after index 12 finishes
+    bool  index11Queued    = false;
+    bool  index12Queued    = false;
+
     /*──────── Constants ───────────*/
     static readonly Color Pink = ParseHex("#FF0047");
     const float ActiveWidth = 10f, HiddenWidth = 0f;
 
-    /*──────── Awake ───────────────*/
+    /*──────── Unity ───────────────*/
     void Awake()
     {
         outlines = new[] {
@@ -71,7 +91,34 @@ public class Manager_Ch1 : MonoBehaviour
         StartCoroutine(AutoplayFirstN(firstAutoCount));
     }
 
-    /*──────── Public API ─────────*/
+    /*──────── Public API (called by triggers) ─────────*/
+    /// <summary>
+    /// Call when a seed successfully enters a *unique* pot trigger.
+    /// </summary>
+    public void NotifySeedPlaced()
+    {
+        if (!waitingForSeeds) return;
+
+        seedsPlacedCount = Mathf.Clamp(seedsPlacedCount + 1, 0, requiredSeedPots);
+        // Debug.Log($"Seeds placed: {seedsPlacedCount}/{requiredSeedPots}");
+
+        if (seedsPlacedCount >= requiredSeedPots)
+        {
+            waitingForSeeds = false;
+            TriggerIndex11Then12();
+        }
+    }
+
+    /// <summary>
+    /// Call when the watering interaction (can / shader-graph hit) is detected.
+    /// </summary>
+    public void NotifyWateringDone()
+    {
+        if (!waitingForWater) return;
+        waitingForWater = false;
+        TryPlay(13); // jump to index 13
+    }
+
     public void PlayDialogByIndex(int index) => TryPlay(index);
 
     /*──────── Internals ──────────*/
@@ -87,7 +134,6 @@ public class Manager_Ch1 : MonoBehaviour
 
     IEnumerator AutoplayFirstN(int count)
     {
-        // one-frame + tiny delay: lets Quest get audio focus
         yield return null;
         yield return new WaitForSeconds(0.05f);
 
@@ -121,7 +167,41 @@ public class Manager_Ch1 : MonoBehaviour
             yield return new WaitForSeconds(3f);
         }
 
+        // ====== Post-line gating logic ======
+        if (idx == 10) // after “place seeds” instruction
+        {
+            waitingForSeeds = true;
+            seedsPlacedCount = 0;
+        }
+        else if (idx == 11)
+        {
+            if (!index12Queued)
+            {
+                index12Queued = true;
+                StartCoroutine(PlayAfterDelay(12, Mathf.Max(0f, delayBeforeIndex12)));
+            }
+        }
+        else if (idx == 12)
+        {
+            waitingForWater = true;
+        }
+
         if (idx == TOTAL - 1 && continueButton) continueButton.SetActive(true);
+    }
+
+    IEnumerator PlayAfterDelay(int index, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        TryPlay(index);
+    }
+
+    void TriggerIndex11Then12()
+    {
+        if (!index11Queued)
+        {
+            index11Queued = true;
+            TryPlay(11); // 12 gets scheduled in PlayLine(11)
+        }
     }
 
     /*──────── Outline helpers ────*/
