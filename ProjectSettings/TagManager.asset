@@ -13,6 +13,9 @@ TagManager:
   - Dialog10Trigger
   - Seed
   - WaterZone
+  - SeedPotTrigger
+  - acceptedTag
+  - WaterCanTip
   layers:
   - Default
   - TransparentFX

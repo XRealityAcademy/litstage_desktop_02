@@ -1,29 +1,30 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider))]
 public class WateringZoneTrigger : MonoBehaviour
 {
-    public Manager_Ch1 manager;
+    Manager_Ch1 manager;
 
-    // Option A: tag the "water stream" or watering can tip
-    public string acceptedTag = "WaterStream";
+    [Header("Detection (Mesh/Collider)")]
+    [Tooltip("Require this tag on the watering can *tip* (e.g., a small cube).")]
+    public string acceptedTag = "WaterCanTip";
 
-    // Option B: leave tag blank and just accept any entry once
-    public bool acceptAnyOnce = false;
-
-    bool done = false;
+    bool fired = false;
 
     void Reset()
     {
         var col = GetComponent<Collider>();
-        if (col) col.isTrigger = true;
+        if (col) col.isTrigger = true; // zone is trigger; tip is non-trigger
     }
+
+    public void SetManager(Manager_Ch1 m) => manager = m;
 
     void OnTriggerEnter(Collider other)
     {
-        if (done) return;
-        if (!acceptAnyOnce && !string.IsNullOrEmpty(acceptedTag) && !other.CompareTag(acceptedTag)) return;
+        if (fired) return;
+        if (!string.IsNullOrEmpty(acceptedTag) && !other.CompareTag(acceptedTag)) return;
 
-        done = true;
-        if (manager) manager.NotifyWateringDone();
+        fired = true;
+        if (manager) manager.NotifyWateringZoneHit();
     }
 }
