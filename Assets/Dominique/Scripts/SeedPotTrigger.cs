@@ -8,22 +8,21 @@ public class SeedPotTrigger : MonoBehaviour
 
     Manager_Ch1 manager;
     bool hasSeed = false;
+    public bool IsSeeded => hasSeed;
 
     void Reset()
     {
         var col = GetComponent<Collider>();
-        if (col) col.isTrigger = true;
+        if (col) col.isTrigger = true; // trigger volume over the soil
     }
 
     public void SetManager(Manager_Ch1 m) => manager = m;
 
     void OnTriggerEnter(Collider other)
     {
-        if (hasSeed) return;
-        if (!other.CompareTag(seedTag)) return;
-
-        // Require Rigidbody to ensure it's a real seed physics object
-        if (!other.attachedRigidbody) return;
+        if (hasSeed) return;                     // only the first seed counts
+        if (!other.CompareTag(seedTag)) return;  // must be a Seed
+        if (!other.attachedRigidbody) return;    // ensure it's a physical object
 
         hasSeed = true;
         if (manager) manager.NotifySeedPlaced(this);

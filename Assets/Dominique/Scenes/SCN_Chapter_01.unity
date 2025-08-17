@@ -26123,6 +26123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3206ba87f56df1248b13541b52b5e8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   acceptedTag: WaterCanTip
 --- !u!1 &1929815426
 GameObject:
@@ -28724,7 +28725,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstAutoCount: 4
+  requiredSeedPots: 6
+  delayAfter9To10: 1
   delayBeforeIndex12: 5
+  seedPotTriggerTag: SeedPot
+  wateringTriggerTag: WaterZone
   seedPots:
   - {fileID: 1328221438}
   - {fileID: 410042415}
@@ -28732,13 +28737,12 @@ MonoBehaviour:
   - {fileID: 1167591091}
   - {fileID: 654575030}
   - {fileID: 984116610}
-  wateringZone: {fileID: 1923042880}
-  waterCanGrabRelay: {fileID: 2109911003}
   potOutline: {fileID: 1596709264}
   seedOutline: {fileID: 7987043345591295104}
   xOutline: {fileID: 1597546767}
   rulerOutline: {fileID: 125343206}
   waterCanOutline: {fileID: 8152168405974430910}
+  chatBotOutline: {fileID: 0}
   dialogText: {fileID: 4959921755038109245}
   audioSource: {fileID: 2109911002}
   dialogClips:
@@ -28793,7 +28797,7 @@ MonoBehaviour:
   - Great! You made it!
   - Grab the watering can, and then  water the plants.
   - "Great job! Now, let\u2019s learn how to form our first hypothesis."
-  - Science is built on observation and measurement.rt the experiment!
+  - Science is built on observation and measurement
   - 'The scientific method generally consists of 4 steps:'
   - "Step 1:\_ Observation \u2013 When a certain pattern or phenomenon of interest
     is observed, which leads to a question such as, \u201CWhat could explain this
@@ -28938,6 +28942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067a2565fd56f3b45b4acef651bbc7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
 --- !u!1 &2121396779
 GameObject:
   m_ObjectHideFlags: 0
