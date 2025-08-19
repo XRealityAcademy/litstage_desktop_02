@@ -11,11 +11,15 @@ TagManager:
   - Dialog8Trigger
   - Dialog9Trigger
   - Dialog10Trigger
+
   - Seed
   - WaterZone
   - SeedPotTrigger
   - acceptedTag
   - WaterCanTip
+
+  - Table
+
   layers:
   - Default
   - TransparentFX
