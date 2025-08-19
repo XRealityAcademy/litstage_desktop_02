@@ -3864,7 +3864,7 @@ GameObject:
   - component: {fileID: 410042412}
   - component: {fileID: 410042411}
   - component: {fileID: 410042415}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog_SeedZone_02
   m_TagString: SeedPotTrigger
   m_Icon: {fileID: 0}
@@ -7900,7 +7900,7 @@ GameObject:
   - component: {fileID: 654575027}
   - component: {fileID: 654575026}
   - component: {fileID: 654575030}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog_SeedZone_05
   m_TagString: SeedPotTrigger
   m_Icon: {fileID: 0}
@@ -12377,7 +12377,7 @@ GameObject:
   - component: {fileID: 954968449}
   - component: {fileID: 954968448}
   - component: {fileID: 954968451}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog10_WaterCan
   m_TagString: Dialog10Trigger
   m_Icon: {fileID: 0}
@@ -12751,7 +12751,7 @@ GameObject:
   - component: {fileID: 984116607}
   - component: {fileID: 984116606}
   - component: {fileID: 984116610}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog_SeedZone_06
   m_TagString: SeedPotTrigger
   m_Icon: {fileID: 0}
@@ -14636,7 +14636,7 @@ GameObject:
   - component: {fileID: 1167591088}
   - component: {fileID: 1167591087}
   - component: {fileID: 1167591091}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog_SeedZone_04
   m_TagString: SeedPotTrigger
   m_Icon: {fileID: 0}
@@ -15540,7 +15540,7 @@ GameObject:
   - component: {fileID: 1235354623}
   - component: {fileID: 1235354622}
   - component: {fileID: 1235354625}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog5_workplace
   m_TagString: Dialog5Trigger
   m_Icon: {fileID: 0}
@@ -16941,7 +16941,7 @@ GameObject:
   - component: {fileID: 1328221435}
   - component: {fileID: 1328221434}
   - component: {fileID: 1328221438}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog_SeedZone_01
   m_TagString: SeedPotTrigger
   m_Icon: {fileID: 0}
@@ -21038,7 +21038,7 @@ GameObject:
   - component: {fileID: 1640665828}
   - component: {fileID: 1640665827}
   - component: {fileID: 1640665831}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog_SeedZone_03
   m_TagString: SeedPotTrigger
   m_Icon: {fileID: 0}
@@ -25470,7 +25470,7 @@ GameObject:
   - component: {fileID: 1836735060}
   - component: {fileID: 1836735059}
   - component: {fileID: 1836735062}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Trigger_Dialog7_X
   m_TagString: Dialog7Trigger
   m_Icon: {fileID: 0}
@@ -25998,7 +25998,7 @@ GameObject:
   - component: {fileID: 1923042877}
   - component: {fileID: 1923042876}
   - component: {fileID: 1923042880}
-  m_Layer: 3
+  m_Layer: 4
   m_Name: Trigger_Dialog_WaterZone
   m_TagString: WaterZone
   m_Icon: {fileID: 0}
@@ -26123,7 +26123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3206ba87f56df1248b13541b52b5e8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 2109911000}
   acceptedTag: WaterCanTip
 --- !u!1 &1929815426
 GameObject:
@@ -28726,8 +28726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstAutoCount: 4
   requiredSeedPots: 6
-  delayAfter9To10: 1
-  delayBeforeIndex12: 5
   seedPotTriggerTag: SeedPot
   wateringTriggerTag: WaterZone
   seedPots:
@@ -28742,7 +28740,7 @@ MonoBehaviour:
   xOutline: {fileID: 1597546767}
   rulerOutline: {fileID: 125343206}
   waterCanOutline: {fileID: 8152168405974430910}
-  chatBotOutline: {fileID: 0}
+  delayBeforeIndex12: 5
   dialogText: {fileID: 4959921755038109245}
   audioSource: {fileID: 2109911002}
   dialogClips:
@@ -28817,6 +28815,33 @@ MonoBehaviour:
   - "A good hypothesis doesn\u2019t need to be right\u2014only clear, testable, and
     informative."
   - "Now, let\u2019s practice creating a good hypothesis."
+  delayAfterLine:
+  - 5
+  - 5
+  - 5
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 1
+  - 2
+  - 1
+  - 5
+  - 3
+  - 3
+  - 8
+  - 5
+  - 8
+  - 5
+  - 5
+  - 13
+  - 3
+  - 5
+  - 5
+  - 3
   continueButton: {fileID: 3409566789716954863}
 --- !u!4 &2109911001
 Transform:
@@ -28942,7 +28967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067a2565fd56f3b45b4acef651bbc7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
+  manager: {fileID: 2109911000}
 --- !u!1 &2121396779
 GameObject:
   m_ObjectHideFlags: 0
