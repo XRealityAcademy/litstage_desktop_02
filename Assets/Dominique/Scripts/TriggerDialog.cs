@@ -1,51 +1,96 @@
 using UnityEngine;
 
+[DisallowMultipleComponent]
 [RequireComponent(typeof(Collider))]
+[AddComponentMenu("XR/Dialog/Trigger Dialog")]
 public class TriggerDialog : MonoBehaviour
 {
-    [Tooltip("Dialog index to play.")]
+    [Tooltip("Dialog index to play on activation.")]
     public int dialogIndex = 4;
 
+    [Tooltip("Reference to the Manager_Ch1 that plays dialog lines. If null, will auto-find one in the scene.")]
     public Manager_Ch1 manager;
 
-    [Header("Ray & Grab (optional)")]
-    public Transform         rightRayOrigin;   // controller transform
-    public CustomInputAction rightHandInput;   // exposes IsGrabPressed
-    [SerializeField] float   maxRayDistance = 10f;
+    [Header("Collision Activation")]
+    [Tooltip("Only activate when this tag enters the trigger.")]
+    public string playerTag = "Player";
 
-    LayerMask dialogMask;
-    bool fired;
+    [Tooltip("Allow activation only once.")]
+    public bool oneShot = true;
+
+    [Header("Ray & Grab Activation (optional)")]
+    [Tooltip("Controller or hand transform used as the ray origin.")]
+    public Transform rightRayOrigin;            // controller/hand
+
+    [Tooltip("Custom input wrapper exposing IsGrabPressed.")]
+    public CustomInputAction rightHandInput;    // must expose bool IsGrabPressed
+
+    [SerializeField, Tooltip("Max distance for the dialog raycast.")]
+    private float maxRayDistance = 10f;
+
+    [SerializeField, Tooltip("Layers the dialog raycast will consider. If left empty, defaults to a layer named 'DialogTrigger' if it exists.")]
+    private LayerMask raycastMask;
+
+    // ───────── Internals ─────────
+    Collider _col;
+    bool _fired;
 
     void Awake()
     {
-        GetComponent<Collider>().isTrigger = true;
+        // Ensure trigger collider
+        _col = GetComponent<Collider>();
+        _col.isTrigger = true;
 
-        dialogMask = LayerMask.GetMask("DialogTrigger");
-        if (!manager) manager = FindObjectOfType<Manager_Ch1>();
+        // Fallback: if mask not set in Inspector, try 'DialogTrigger' to mirror your old setup
+        if (raycastMask.value == 0)
+            raycastMask = LayerMask.GetMask("DialogTrigger");
+
+        // Soft auto-wiring for convenience
+        if (!manager)
+            manager = FindObjectOfType<Manager_Ch1>();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (!fired && other.CompareTag("Player")) Activate();
+        if (_fired && oneShot) return;
+        if (!string.IsNullOrEmpty(playerTag) && other.CompareTag(playerTag))
+            Activate();
     }
 
     void Update()
     {
-        if (fired || !rightRayOrigin || !rightHandInput || !rightHandInput.IsGrabPressed) return;
+        if (_fired && oneShot) return;
+        if (!rightRayOrigin || !rightHandInput || !rightHandInput.IsGrabPressed) return;
 
-        if (Physics.Raycast(rightRayOrigin.position, rightRayOrigin.forward,
-                            out var hit, maxRayDistance, dialogMask,
-                            QueryTriggerInteraction.Collide) &&
-            hit.collider == GetComponent<Collider>())
+        // Raycast from the controller/hand forward
+        if (Physics.Raycast(rightRayOrigin.position,
+                            rightRayOrigin.forward,
+                            out var hit,
+                            maxRayDistance,
+                            raycastMask.value == 0 ? ~0 : raycastMask,
+                            QueryTriggerInteraction.Collide))
         {
-            Activate();
+            if (hit.collider == _col)
+                Activate();
         }
     }
 
     void Activate()
     {
-        if (fired || !manager) return;
-        fired = true;
+        if (_fired && oneShot) return;
+        if (!manager)
+        {
+            Debug.LogWarning($"{nameof(TriggerDialog)}: No Manager_Ch1 found; cannot play dialog index {dialogIndex}.");
+            return;
+        }
+
+        _fired = true;
         manager.PlayDialogByIndex(dialogIndex);
+    }
+
+    // Optional helper if you ever need to re-arm this trigger at runtime
+    public void ResetTrigger()
+    {
+        _fired = false;
     }
 }

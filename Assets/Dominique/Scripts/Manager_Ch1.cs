@@ -14,12 +14,12 @@ public class Manager_Ch1 : MonoBehaviour
     public int requiredSeedPots = 6;
 
     [Tooltip("Tag used by seed-pot triggers (legacy OnTriggerEnter on THIS Manager).")]
-    public string seedPotTriggerTag = "SeedPot";
+    public string seedPotTriggerTag = "SeedPotTrigger";
 
     [Tooltip("Tag used by the watering trigger zone (legacy OnTriggerEnter on THIS Manager).")]
     public string wateringTriggerTag = "WaterZone";
 
-    /* === NEW: strict per-pot seeding (does NOT change 0–9) === */
+    /* === Strict per-pot seeding (does NOT change 0–9) === */
     [Header("Strict Seeding (exactly 6 unique pots)")]
     [Tooltip("Assign the SIX SeedPotTrigger components (one on each pot).")]
     public SeedPotTrigger[] seedPots = new SeedPotTrigger[6];
@@ -31,8 +31,7 @@ public class Manager_Ch1 : MonoBehaviour
     public Outline xOutline;
     public Outline rulerOutline;
     public Outline waterCanOutline;
-    //public Outline chatBotOutline; // keep as in your current 0–9 setup
-    public float delayBeforeIndex12 = 5f;
+    // (chatBotOutline removed per your current version)
 
     Outline[] outlines;
     int currentItemIndex = -1;   // starts at “none”
@@ -54,13 +53,13 @@ public class Manager_Ch1 : MonoBehaviour
     readonly bool[] played = new bool[TOTAL];
 
     /*──────── Progress State ─────*/
-    int seedsPlacedCount = 0;     
-    bool waitingForSeeds = false; 
-    bool waitingForWater = false; 
+    int seedsPlacedCount = 0;            // legacy counter (kept but unused in strict mode)
+    bool waitingForSeeds = false;        // becomes true after index 10 finishes
+    bool waitingForWater = false;        // becomes true after index 12 finishes
     bool index11Queued = false;
     bool index12Queued = false;
 
-    /* === NEW: track unique pots that have received their first seed === */
+    /* === Track unique pots that received their first seed === */
     readonly HashSet<SeedPotTrigger> uniqueSeededPots = new HashSet<SeedPotTrigger>();
 
     /*──────── Constants ───────────*/
@@ -82,16 +81,16 @@ public class Manager_Ch1 : MonoBehaviour
             return;
         }
 
-        if (delayAfterLine.Length != TOTAL)
+        if (delayAfterLine == null || delayAfterLine.Length != TOTAL)
         {
-            delayAfterLine = new float[TOTAL]; // reset to correct size if mismatch
+            delayAfterLine = new float[TOTAL]; // ensure correct size
         }
 
-        // Set defaults (only if unset)
-        delayAfterLine[9] = Mathf.Approximately(delayAfterLine[9], 0f) ? 1.0f : delayAfterLine[9];   // after 9→10
-        delayAfterLine[11] = Mathf.Approximately(delayAfterLine[11], 0f) ? 5.0f : delayAfterLine[11]; // before 12
+        // Set sensible defaults only if unset (≈ 0)
+        if (Mathf.Approximately(delayAfterLine[9], 0f)) delayAfterLine[9] = 1.0f;   // 9→10
+        if (Mathf.Approximately(delayAfterLine[11], 0f)) delayAfterLine[11] = 5.0f; // 11→12
         for (int i = 14; i < TOTAL; i++)
-            if (Mathf.Approximately(delayAfterLine[i], 0f)) delayAfterLine[i] = 5.0f; // 14→25 defaults
+            if (Mathf.Approximately(delayAfterLine[i], 0f)) delayAfterLine[i] = 5.0f; // 14→25
 
         foreach (var o in outlines) if (o) SetOutlineHidden(o);
 
@@ -104,6 +103,7 @@ public class Manager_Ch1 : MonoBehaviour
             if (audioSource.volume <= 0f) audioSource.volume = 1f;
         }
 
+        // Wire seed pots so they can call back
         for (int i = 0; i < seedPots.Length; i++)
             if (seedPots[i]) seedPots[i].SetManager(this);
     }
@@ -111,15 +111,17 @@ public class Manager_Ch1 : MonoBehaviour
     void Start()
     {
         continueButton?.SetActive(false);
-        StartCoroutine(AutoplayFirstN(firstAutoCount));   
+        StartCoroutine(AutoplayFirstN(firstAutoCount));   // 0–(firstAutoCount-1)
     }
 
     /*──────── Public API (kept) ─────────*/
     public void PlayDialogByIndex(int index) => TryPlay(index);
 
-    public void NotifySeedPlaced() =>
-        Debug.LogWarning("NotifySeedPlaced() legacy call ignored. Use SeedPotTrigger per pot.");
+    /// Legacy seed callback (kept for backward compatibility)
+    public void NotifySeedPlaced()
+        => Debug.LogWarning("NotifySeedPlaced() legacy call ignored. Use SeedPotTrigger per pot.");
 
+    /// Strict per-pot version — counts UNIQUE pots. Call from SeedPotTrigger.
     public void NotifySeedPlaced(SeedPotTrigger pot)
     {
         if (!waitingForSeeds || pot == null) return;
@@ -131,27 +133,34 @@ public class Manager_Ch1 : MonoBehaviour
 
         if (uniqueSeededPots.Add(pot))
         {
-            if (uniqueSeededPots.Count >= 6)
+            if (uniqueSeededPots.Count >= requiredSeedPots)  // typically 6
             {
                 waitingForSeeds = false;
-                TriggerIndex11Then12();
+                TriggerIndex11Then12(); // plays 11; schedules 12 after 11
             }
         }
     }
 
+    /// Watering done (kept API). Called by WateringZoneTrigger below.
     public void NotifyWateringDone()
     {
         if (!waitingForWater) return;
         waitingForWater = false;
-        TryPlay(13); 
+        TryPlay(13); // jump to index 13
     }
 
+    /*──────── Collision Hooks ─────*/
     void OnTriggerEnter(Collider other)
     {
+        // Existing legacy paths (kept)
         if (!string.IsNullOrEmpty(seedPotTriggerTag) && other.CompareTag(seedPotTriggerTag))
+        {
             NotifySeedPlaced();
+        }
         else if (!string.IsNullOrEmpty(wateringTriggerTag) && other.CompareTag(wateringTriggerTag))
+        {
             NotifyWateringDone();
+        }
     }
 
     /*──────── Internals ──────────*/
@@ -159,6 +168,7 @@ public class Manager_Ch1 : MonoBehaviour
     {
         if (idx < 0 || idx >= played.Length || played[idx]) return;
 
+        // Show corresponding item outline for Dialog 5–10 (indices 4..9)
         if (idx >= 4 && idx <= 9) SwitchOutline(idx - 4);
 
         StartCoroutine(PlayLine(idx));
@@ -199,35 +209,35 @@ public class Manager_Ch1 : MonoBehaviour
             yield return new WaitForSeconds(3f);
         }
 
-        // Apply custom per-index delay (if any)
+        // Optional per-index delay AFTER the clip finishes
         if (delayAfterLine[idx] > 0f)
             yield return new WaitForSeconds(delayAfterLine[idx]);
 
+        // ====== Post-line gating / ordering ======
         if (idx == 9)
         {
-            StartCoroutine(PlayAfterDelay(10, delayAfterLine[9]));
+            StartCoroutine(PlayAfterDelay(10, Mathf.Max(0f, delayAfterLine[9])));
         }
         else if (idx == 10)
         {
-            // Begin strict seeding gate: 6 unique pots, 1 seed each            
             waitingForSeeds = true;
             uniqueSeededPots.Clear();
+
             foreach (var p in seedPots)
                 if (p && p.IsSeeded) uniqueSeededPots.Add(p);
 
-            if (uniqueSeededPots.Count >= 6)
+            if (uniqueSeededPots.Count >= requiredSeedPots)
             {
-                 waitingForSeeds = false;
-                 TriggerIndex11Then12();
+                waitingForSeeds = false;
+                TriggerIndex11Then12();
             }
-
         }
         else if (idx == 11)
         {
             if (!index12Queued)
             {
                 index12Queued = true;
-                StartCoroutine(PlayAfterDelay(12, Mathf.Max(0f, delayBeforeIndex12)));
+                StartCoroutine(PlayAfterDelay(12, Mathf.Max(0f, delayAfterLine[11])));
             }
         }
         else if (idx == 12)
@@ -253,7 +263,7 @@ public class Manager_Ch1 : MonoBehaviour
         if (!index11Queued)
         {
             index11Queued = true;
-            TryPlay(11); 
+            TryPlay(11);
         }
     }
 
@@ -304,7 +314,7 @@ public class Manager_Ch1 : MonoBehaviour
     {
         for (int i = 14; i < TOTAL; i++)
         {
-            yield return new WaitForSeconds(delayAfterLine[i]);
+            yield return new WaitForSeconds(Mathf.Max(0f, delayAfterLine[i]));
             TryPlay(i);
             while (!played[i]) yield return null;
         }

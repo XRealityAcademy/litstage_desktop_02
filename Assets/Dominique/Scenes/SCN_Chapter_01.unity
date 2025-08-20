@@ -588,9 +588,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 8
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &62329129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -749,7 +754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &78314931
 Transform:
   m_ObjectHideFlags: 0
@@ -3900,9 +3905,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 11
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &410042412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7936,9 +7946,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 11
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &654575027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9776,9 +9791,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 7
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &773646165
 GameObject:
   m_ObjectHideFlags: 0
@@ -9798,7 +9818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &773646166
 Transform:
   m_ObjectHideFlags: 0
@@ -11811,7 +11831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &890617036
 Transform:
   m_ObjectHideFlags: 0
@@ -12147,7 +12167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &913831605
 Transform:
   m_ObjectHideFlags: 0
@@ -12487,9 +12507,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 9
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!224 &956350312 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2397425259038431700, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
@@ -12787,9 +12812,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 11
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &984116607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14672,9 +14702,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 11
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &1167591088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15203,9 +15238,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 5
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1224226967
 GameObject:
   m_ObjectHideFlags: 0
@@ -15650,9 +15690,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 4
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1236239201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16977,9 +17022,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 11
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &1328221435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21074,9 +21124,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 11
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &1640665828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21350,7 +21405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1648641437
 Transform:
   m_ObjectHideFlags: 0
@@ -25580,9 +25635,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 6
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1839380540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25998,7 +26058,7 @@ GameObject:
   - component: {fileID: 1923042877}
   - component: {fileID: 1923042876}
   - component: {fileID: 1923042880}
-  m_Layer: 4
+  m_Layer: 0
   m_Name: Trigger_Dialog_WaterZone
   m_TagString: WaterZone
   m_Icon: {fileID: 0}
@@ -26034,9 +26094,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogIndex: 13
   manager: {fileID: 2109911000}
+  playerTag: Player
+  oneShot: 1
   rightRayOrigin: {fileID: 235823007}
   rightHandInput: {fileID: 6177753701371478280}
   maxRayDistance: 10
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &1923042877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28512,7 +28577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2106120266
 Transform:
   m_ObjectHideFlags: 0
@@ -28726,7 +28791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstAutoCount: 4
   requiredSeedPots: 6
-  seedPotTriggerTag: SeedPot
+  seedPotTriggerTag: SeedPotTrigger
   wateringTriggerTag: WaterZone
   seedPots:
   - {fileID: 1328221438}
@@ -28740,7 +28805,6 @@ MonoBehaviour:
   xOutline: {fileID: 1597546767}
   rulerOutline: {fileID: 125343206}
   waterCanOutline: {fileID: 8152168405974430910}
-  delayBeforeIndex12: 5
   dialogText: {fileID: 4959921755038109245}
   audioSource: {fileID: 2109911002}
   dialogClips:
@@ -28816,31 +28880,31 @@ MonoBehaviour:
     informative."
   - "Now, let\u2019s practice creating a good hypothesis."
   delayAfterLine:
+  - 2
+  - 2
+  - 2
+  - 3
+  - 3
+  - 3
   - 5
   - 5
-  - 5
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
   - 3
   - 3
   - 1
   - 2
   - 1
-  - 5
   - 3
   - 3
+  - 3
+  - 12
+  - 10
+  - 10
   - 8
-  - 5
-  - 8
-  - 5
-  - 5
-  - 13
+  - 3
+  - 25
   - 3
   - 5
-  - 5
+  - 8
   - 3
   continueButton: {fileID: 3409566789716954863}
 --- !u!4 &2109911001
