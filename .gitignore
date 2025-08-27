@@ -58,6 +58,9 @@ Assets/AddressableAssetsData/AssetGroups/
 # Asset Store tools plugin
 Assets/AssetStoreTools*
 
+# Ignore Unity package samples (safe to regenerate locally)
+Assets/Samples/
+
 # Exclude local test results
 TestResults/
 
