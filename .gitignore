@@ -61,6 +61,9 @@ Assets/AssetStoreTools*
 # Ignore Unity package samples (safe to regenerate locally)
 Assets/Samples/
 
+# Ignore Editor Build Settings
+ProjectSettings/EditorBuildSettings.asset
+
 # Exclude local test results
 TestResults/
 
