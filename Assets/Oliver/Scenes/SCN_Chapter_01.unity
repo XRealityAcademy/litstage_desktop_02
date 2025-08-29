@@ -281,6 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16486062}
   - component: {fileID: 16486063}
+  - component: {fileID: 16486064}
   m_Layer: 0
   m_Name: Spout
   m_TagString: Untagged
@@ -318,12 +319,25 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.7276578, y: 7.5970483, z: 2.8996568}
   m_Center: {x: 0.14255655, y: -3.03166, z: -0.06501924}
+--- !u!114 &16486064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16486061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026ecfe1fb7e5b6499f9b670e66b02b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterParticles: {fileID: 2110157269}
 --- !u!4 &17355330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5161989964646342875, guid: c18c2334d0f5bb94cbb090401535d577, type: 3}
@@ -6517,7 +6531,7 @@ GameObject:
   - component: {fileID: 585081337}
   m_Layer: 0
   m_Name: SoilCollider (2)
-  m_TagString: Untagged
+  m_TagString: PlantSoil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12989,7 +13003,7 @@ GameObject:
   - component: {fileID: 1005543863}
   m_Layer: 0
   m_Name: SoilCollider (3)
-  m_TagString: Untagged
+  m_TagString: PlantSoil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13917,7 +13931,7 @@ GameObject:
   - component: {fileID: 1062040941}
   m_Layer: 0
   m_Name: SoilCollider
-  m_TagString: Untagged
+  m_TagString: PlantSoil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18955,7 +18969,7 @@ GameObject:
   - component: {fileID: 1442013151}
   m_Layer: 0
   m_Name: SoilCollider (4)
-  m_TagString: Untagged
+  m_TagString: PlantSoil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26268,7 +26282,7 @@ GameObject:
   - component: {fileID: 1888469266}
   m_Layer: 0
   m_Name: SoilCollider (1)
-  m_TagString: Untagged
+  m_TagString: PlantSoil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27797,7 +27811,7 @@ GameObject:
   - component: {fileID: 2008331996}
   m_Layer: 0
   m_Name: SoilCollider (5)
-  m_TagString: Untagged
+  m_TagString: PlantSoil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

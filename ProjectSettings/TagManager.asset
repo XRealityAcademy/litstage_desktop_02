@@ -15,6 +15,7 @@ TagManager:
   - WaterZone
   - WaterCanTip
   - Seed
+  - PlantSoil
   layers:
   - Default
   - TransparentFX
