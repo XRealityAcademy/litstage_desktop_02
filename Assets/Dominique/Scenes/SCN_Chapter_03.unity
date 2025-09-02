@@ -1007,7 +1007,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &79819761
 CanvasGroup:
@@ -7617,7 +7617,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &515727266
 CanvasGroup:
@@ -10451,7 +10451,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &652405259
 CanvasGroup:
@@ -11355,7 +11355,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &696990892
 CanvasGroup:
@@ -17300,11 +17300,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4704240697808797663, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4704240697808797663, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4704240698125147208, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_text
@@ -22159,11 +22159,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4704240697808797663, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 122.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4704240697808797663, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4704240698125147208, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_text
@@ -29963,7 +29963,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!225 &1754958434
 CanvasGroup:
@@ -42014,8 +42014,8 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  chart: {fileID: 0}
-  numberUI: {fileID: 0}
+  chart: {fileID: 470629229}
+  numberUI: {fileID: 1947619863}
   continueButton: {fileID: 0}
 --- !u!1 &2120851971
 GameObject:
@@ -42458,27 +42458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 4133950998697538046}
-  m_TeleportInteractor: {fileID: 4786390515500897314}
-  m_TeleportMode: {fileID: 1263111715868034790, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_TeleportModeCancel: {fileID: 737890489006591557, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Turn: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SnapTurn: {fileID: -7374733323251553461, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Move: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_UIScroll: {fileID: 2464016903823916871, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SmoothMotionEnabled: 1
-  m_SmoothTurnEnabled: 0
-  m_NearFarEnableTeleportDuringNearInteraction: 1
-  m_UIScrollingEnabled: 1
-  m_RayInteractorChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
-  m_StartCalled: 0
-  m_PostponedDeactivateTeleport: 0
-  m_PostponedNearRegionLocomotion: 0
-  m_HoveringScrollableUI: 0
 --- !u!114 &27999638313936798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42612,57 +42591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5f76f9ea8c80547973ab01877f9567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ThumbstickTransform: {fileID: 7206581308347788685}
-  m_StickRotationRange: {x: 30, y: 30}
-  m_StickInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Thumbstick
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 8a80d2d1-54ab-40f3-ae58-acd679e9f63f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: -8666952849799569744, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-    m_CallingBypass: 0
-  m_TriggerTransform: {fileID: 833225753639679532}
-  m_TriggerXAxisRotationRange: {x: 0, y: -15}
-  m_TriggerInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Trigger
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: 594965ae-7ab6-4c16-889f-f371fa785459
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: 0
-    m_CallingBypass: 0
-  m_GripTransform: {fileID: 1535558802624962848}
-  m_GripRightRange: {x: -0.0125, y: -0.011}
-  m_GripInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Grip
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: 615b1144-610d-48ff-a7ed-4f4447f2ed86
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: 0
-    m_CallingBypass: 0
 --- !u!114 &152231454489163363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43068,10 +42996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6980b6cb3b4f12b6b75074e4ef59f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FilterMinCutoff: 0.1
-  m_FilterBeta: 0.2
-  m_WasLeftHandTrackedLastFrame: 0
-  m_WasRightHandTrackedLastFrame: 0
 --- !u!1 &445615186190536354
 GameObject:
   m_ObjectHideFlags: 0
@@ -43570,117 +43494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865d01d2834c9cb4caa8f2c901104c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AffordanceStateProvider: {fileID: 5153799143172389028}
-  m_ReplaceIdleStateValueWithInitialValue: 0
-  m_Initialized: 0
-  <initialValue>k__BackingField:
-    x: 0
-    y: 0
-    z: 0
-  <initialValueCaptured>k__BackingField: 0
-  m_OutputInitialized: 0
-  m_AffordanceThemeDatum:
-    m_UseConstant: 0
-    m_ConstantValue:
-      m_StateAnimationCurve:
-        m_UseConstant: 1
-        m_ConstantValue:
-          m_Curve:
-          - time: 0
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - time: 1
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        m_Variable: {fileID: 0}
-      m_List:
-      - stateName: disabled
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: idle
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: hovered
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: hoveredPriority
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: selected
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: activated
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: focused
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-    m_Variable: {fileID: 11400000, guid: 2826cece951f71642a19da5a2080a27c, type: 2}
-  m_ValueUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
-  m_TransformToTranslate: {fileID: 4431700482818619098}
-  m_HasTransformToTranslate: 0
-  m_InitialOffset:
-    x: 0
-    y: 0
-    z: 0
 --- !u!1 &625795845841948340
 GameObject:
   m_ObjectHideFlags: 0
@@ -44666,27 +44479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac216f0eb04754b1d938aac6380b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 6363092859342548833}
-  m_TeleportInteractor: {fileID: 7175299340573323323}
-  m_TeleportMode: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_TeleportModeCancel: {fileID: 2307464322626738743, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Turn: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SnapTurn: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Move: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_UIScroll: {fileID: -6756787485274679044, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SmoothMotionEnabled: 0
-  m_SmoothTurnEnabled: 0
-  m_NearFarEnableTeleportDuringNearInteraction: 1
-  m_UIScrollingEnabled: 1
-  m_RayInteractorChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
-  m_StartCalled: 0
-  m_PostponedDeactivateTeleport: 0
-  m_PostponedNearRegionLocomotion: 0
-  m_HoveringScrollableUI: 0
 --- !u!114 &993405907028808892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44774,36 +44566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83bc4aa48d0da648b49d0fd56690b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AimFlagsAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Aim Flags
-      m_Type: 0
-      m_ExpectedControlType: Integer
-      m_Id: 5a4fce95-4f7e-4130-b323-a6ab97b798b3
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 3270634481770055383, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SystemGestureStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1714070883514564629}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-      - {m_Target: {fileID: 7463778923719686626}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_SystemGestureEnded:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 1714070883514564629}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-      - {m_Target: {fileID: 7463778923719686626}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_MenuPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 3716601380114732727}, m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine, m_MethodName: Play, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_AimFlagsBound: 0
 --- !u!114 &1104092461515988785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47153,9 +46915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e989a75b2954bdab01ca618a30d5de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Interactor: {fileID: 7868745572692796339}
-  m_ObjectToHide: {fileID: 7807897610406517967}
-  m_HasCurveDataProvider: 0
 --- !u!4 &1654273991283366746
 Transform:
   m_ObjectHideFlags: 0
@@ -47582,13 +47341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8693657abb5062a40a80ba3cb86ef181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_XRHandTrackingEvents: {fileID: 3349769181575880536}
-  m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 7868745572692796339}
-  m_TargetRotation: {fileID: 4397614841786600294}
-  m_RotationSmoothingSpeed: 12
-  m_HasTargetRotationTransform: 0
-  m_HasRayProvider: 0
 --- !u!4 &1829840650772429465
 Transform:
   m_ObjectHideFlags: 0
@@ -50658,36 +50410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83bc4aa48d0da648b49d0fd56690b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AimFlagsAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Aim Flags
-      m_Type: 0
-      m_ExpectedControlType: Integer
-      m_Id: 5a4fce95-4f7e-4130-b323-a6ab97b798b3
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: -6595512345416212934, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SystemGestureStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 4277267431163489310}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-      - {m_Target: {fileID: 548751419177339099}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_SystemGestureEnded:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 4277267431163489310}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-      - {m_Target: {fileID: 548751419177339099}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_MenuPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 5970921987814187695}, m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine, m_MethodName: Play, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_AimFlagsBound: 0
 --- !u!4 &2774220344422390532
 Transform:
   m_ObjectHideFlags: 0
@@ -54709,7 +54431,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &4157825837951583644
 MonoBehaviour:
@@ -54942,7 +54664,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 89.4, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!223 &4157825838230371425
 Canvas:
@@ -55194,7 +54916,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.000000026077032}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &4157825838371533292
 MonoBehaviour:
@@ -56538,66 +56260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1e8c997df241c1a67045eeac79b41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mediator: {fileID: 2182745646303912305}
-  m_TransformationPriority: 0
-  m_ActiveBodyTransformer: {fileID: 0}
-  m_AnyTransformationsThisFrame: 0
-  m_System: {fileID: 0}
-  <locomotionPhase>k__BackingField: 0
-  m_MoveSpeed: 2.5
-  m_InAirControlModifier: 0.5
-  m_EnableStrafe: 1
-  m_EnableFly: 0
-  m_ForwardSource: {fileID: 4786390516147574872}
-  m_LeftHandMoveInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Left Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 16c2fabb-fb1c-4a11-94d0-0b1d894b8593
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-    m_CallingBypass: 0
-  m_RightHandMoveInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Right Hand Move
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: af2e3d83-024e-4a1f-8bc1-f97f0b4ae1d5
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-    m_CallingBypass: 0
-  m_GravityProvider: {fileID: 0}
-  m_CharacterController: {fileID: 0}
-  m_AttemptedGetCharacterController: 0
-  m_IsMovingXROrigin: 0
-  m_GravityDrivenVelocity: {x: 0, y: 0, z: 0}
-  m_InAirVelocity: {x: 0, y: 0, z: 0}
-  m_UseGravity: 1
-  m_HeadTransform: {fileID: 4786390516147574872}
-  m_LeftControllerTransform: {fileID: 4786390516597831738}
-  m_RightControllerTransform: {fileID: 4786390516253948123}
-  m_LeftHandMovementDirection: 0
-  m_RightHandMovementDirection: 0
-  m_CombinedTransform: {fileID: 0}
-  m_LeftMovementPose:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
-  m_RightMovementPose:
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!4 &4645796627760428241
 Transform:
   m_ObjectHideFlags: 0
@@ -56903,7 +56565,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: -0.000000014901161}
-  m_SizeDelta: {x: 89.4, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!223 &4737430128365035375
 Canvas:
@@ -57184,7 +56846,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.0000000037252903}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &4737430128921892652
 MonoBehaviour:
@@ -57480,7 +57142,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!223 &4737430129510677479
 Canvas:
@@ -58034,7 +57696,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &4738644657435189664
 GameObject:
@@ -59516,18 +59178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbac611a2982409ab5f5e604f53bcad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Handedness: 2
-  m_PokeGestureStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 7868745572692796339}, m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor, Unity.XR.Interaction.Toolkit, m_MethodName: set_enableFarCasting, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_PokeGestureEnded:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 7868745572692796339}, m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor, Unity.XR.Interaction.Toolkit, m_MethodName: set_enableFarCasting, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_IsPoking: 0
 --- !u!1 &5107938897183765493
 GameObject:
   m_ObjectHideFlags: 0
@@ -60536,117 +60186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865d01d2834c9cb4caa8f2c901104c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AffordanceStateProvider: {fileID: 1605818171369068776}
-  m_ReplaceIdleStateValueWithInitialValue: 0
-  m_Initialized: 0
-  <initialValue>k__BackingField:
-    x: 0
-    y: 0
-    z: 0
-  <initialValueCaptured>k__BackingField: 0
-  m_OutputInitialized: 0
-  m_AffordanceThemeDatum:
-    m_UseConstant: 0
-    m_ConstantValue:
-      m_StateAnimationCurve:
-        m_UseConstant: 1
-        m_ConstantValue:
-          m_Curve:
-          - time: 0
-            value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          - time: 1
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        m_Variable: {fileID: 0}
-      m_List:
-      - stateName: disabled
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: idle
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: hovered
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: hoveredPriority
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: selected
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: activated
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-      - stateName: focused
-        animationStateStartValue:
-          x: 0
-          y: 0
-          z: 0
-        animationStateEndValue:
-          x: 0
-          y: 0
-          z: 0
-    m_Variable: {fileID: 11400000, guid: 2826cece951f71642a19da5a2080a27c, type: 2}
-  m_ValueUpdated:
-    m_PersistentCalls:
-      m_Calls: []
-    m_CallsDirty: 1
-  m_TransformToTranslate: {fileID: 4026839475633848144}
-  m_HasTransformToTranslate: 0
-  m_InitialOffset:
-    x: 0
-    y: 0
-    z: 0
 --- !u!4 &5537968361704907193
 Transform:
   m_ObjectHideFlags: 0
@@ -62575,7 +62114,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 46}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!223 &6216713944007945503
 Canvas:
@@ -62817,13 +62356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8693657abb5062a40a80ba3cb86ef181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_XRHandTrackingEvents: {fileID: 7611112325411705702}
-  m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 2827774052862950558}
-  m_TargetRotation: {fileID: 4989395364358152435}
-  m_RotationSmoothingSpeed: 12
-  m_HasTargetRotationTransform: 0
-  m_HasRayProvider: 0
 --- !u!4 &6324155100684738530
 Transform:
   m_ObjectHideFlags: 0
@@ -63225,9 +62757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e989a75b2954bdab01ca618a30d5de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Interactor: {fileID: 2827774052862950558}
-  m_ObjectToHide: {fileID: 2469046224998710391}
-  m_HasCurveDataProvider: 0
 --- !u!114 &6424964449174840163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65146,44 +64675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f61d1c82c9fc6429ebd4791a4d6817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ValueInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: Value
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: c31ad6e4-ecd9-4e94-8d50-bcb7e193b9f4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: Value Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: 8e36200b-9f0d-48ce-a8a2-38e46eab9489
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: -6395602842196007441, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: 71106601250685021, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-    m_ManualFramePerformed: 0
-    m_ManualFrameCompleted: 0
-    m_CallingBypass: 0
-  m_PressThreshold: 0.8
-  m_ReleaseThreshold: 0.25
-  m_IsPerformed: 0
-  m_WasPerformedThisFrame: 0
-  m_WasCompletedThisFrame: 0
 --- !u!114 &6694309274687837633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65541,44 +65032,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f61d1c82c9fc6429ebd4791a4d6817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ValueInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: Value
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: 573218e1-1037-443b-b4e7-621bf6e32482
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: Value Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: fd259e71-bb9d-4042-83b0-5704f6c057c9
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 3279264004350380116, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: -5908353012961274365, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-    m_ManualFramePerformed: 0
-    m_ManualFrameCompleted: 0
-    m_CallingBypass: 0
-  m_PressThreshold: 0.8
-  m_ReleaseThreshold: 0.25
-  m_IsPerformed: 0
-  m_WasPerformedThisFrame: 0
-  m_WasCompletedThisFrame: 0
 --- !u!1 &6813344505607472746
 GameObject:
   m_ObjectHideFlags: 0
@@ -66825,44 +66278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f61d1c82c9fc6429ebd4791a4d6817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ValueInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: Value
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: 10f0c96d-6c50-4214-b520-55ed10f0d86a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: Value Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: 1af57d1d-a16a-4f44-9f26-44d165b54d6a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-    m_ManualFramePerformed: 0
-    m_ManualFrameCompleted: 0
-    m_CallingBypass: 0
-  m_PressThreshold: 0.8
-  m_ReleaseThreshold: 0.25
-  m_IsPerformed: 0
-  m_WasPerformedThisFrame: 0
-  m_WasCompletedThisFrame: 0
 --- !u!114 &7279853403182406025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70062,8 +69477,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef0e4723b64c884699a375196c13ac0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FallbackIfEyeTrackingUnavailable: 1
-  m_EyeTrackingDeviceFound: 0
 --- !u!1001 &8082471361860586650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71296,44 +70709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f61d1c82c9fc6429ebd4791a4d6817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ValueInput:
-    m_InputSourceMode: 2
-    m_InputActionPerformed:
-      m_Name: Value
-      m_Type: 1
-      m_ExpectedControlType: 
-      m_Id: 8af5f191-8af9-4df3-a0eb-ab393e7026bf
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionValue:
-      m_Name: Value Value
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: 23ee9ba6-3999-4f3d-8189-277a6cf4cb42
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualPerformed: 0
-    m_ManualValue: 0
-    m_ManualQueuePerformed: 0
-    m_ManualQueueWasPerformedThisFrame: 0
-    m_ManualQueueWasCompletedThisFrame: 0
-    m_ManualQueueValue: 0
-    m_ManualQueueTargetFrame: 0
-    m_ManualFramePerformed: 0
-    m_ManualFrameCompleted: 0
-    m_CallingBypass: 0
-  m_PressThreshold: 0.8
-  m_ReleaseThreshold: 0.25
-  m_IsPerformed: 0
-  m_WasPerformedThisFrame: 0
-  m_WasCompletedThisFrame: 0
 --- !u!114 &8586613861305364397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71346,57 +70721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5f76f9ea8c80547973ab01877f9567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ThumbstickTransform: {fileID: 471723155916560979}
-  m_StickRotationRange: {x: 30, y: -30}
-  m_StickInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Thumbstick
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 2f424cdc-fe47-4989-a9c2-6fa97f609e70
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: -60998027439631388, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: {x: 0, y: 0}
-    m_CallingBypass: 0
-  m_TriggerTransform: {fileID: 7573146207914541554}
-  m_TriggerXAxisRotationRange: {x: 0, y: -15}
-  m_TriggerInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Trigger
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: adbe6783-3cbb-48f7-8ad5-0b09a32b9943
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: 0
-    m_CallingBypass: 0
-  m_GripTransform: {fileID: 8630700819410245374}
-  m_GripRightRange: {x: -0.0125, y: -0.011}
-  m_GripInput:
-    m_InputSourceMode: 2
-    m_InputAction:
-      m_Name: Grip
-      m_Type: 0
-      m_ExpectedControlType: Axis
-      m_Id: 7ddc77c6-8f81-4889-aaca-964286dbe1ea
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_InputActionReference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_ObjectReferenceObject: {fileID: 0}
-    m_ManualValue: 0
-    m_CallingBypass: 0
 --- !u!4 &8605452493678974436
 Transform:
   m_ObjectHideFlags: 0
@@ -72094,18 +71418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbac611a2982409ab5f5e604f53bcad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Handedness: 1
-  m_PokeGestureStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 2827774052862950558}, m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor, Unity.XR.Interaction.Toolkit, m_MethodName: set_enableFarCasting, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_PokeGestureEnded:
-    m_PersistentCalls:
-      m_Calls:
-      - {m_Target: {fileID: 2827774052862950558}, m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor, Unity.XR.Interaction.Toolkit, m_MethodName: set_enableFarCasting, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
-    m_CallsDirty: 1
-  m_IsPoking: 0
 --- !u!4 &8834806121974648679
 Transform:
   m_ObjectHideFlags: 0
@@ -73180,11 +72492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e766f86cb7d2461683eb37d8a971fb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ClimbTeleportInteractor: {fileID: 5252508899610713453}
-  m_PointerPrefab: {fileID: 5212361887338514247, guid: ae1968658b9687b47976fe86c062168f, type: 3}
-  m_PointerDistance: 0.3
-  m_ActiveTeleportVolume: {fileID: 0}
-  m_PointerInstance: {fileID: 0}
 --- !u!4 &9151712089748063906
 Transform:
   m_ObjectHideFlags: 0
@@ -73213,18 +72520,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9813c68d7d6f44282ace8bd2d1fd46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UseOptimizedControls: 0
-  m_LeftHandMesh: {fileID: 3554853006689801357}
-  m_RightHandMesh: {fileID: 4625840008390496443}
-  m_HandMeshMaterial: {fileID: 0}
-  m_DrawMeshes: 1
-  m_PreviousDrawMeshes: 0
-  m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868, type: 3}
-  m_DebugDrawJoints: 0
-  m_PreviousDebugDrawJoints: 0
-  m_VelocityPrefab: {fileID: 8538602047018081646, guid: 629fd7882ec6bfc499a5fcf20035282b, type: 3}
-  m_VelocityType: 2
-  m_PreviousVelocityType: 0
 --- !u!1 &9170464566426798969
 GameObject:
   m_ObjectHideFlags: 0
