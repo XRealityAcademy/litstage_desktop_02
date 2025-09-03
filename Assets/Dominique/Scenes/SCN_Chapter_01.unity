@@ -10850,7 +10850,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1508036975}
   - {fileID: 1573382093}
   - {fileID: 17355330}
   - {fileID: 986458564}
@@ -19264,11 +19263,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1502451421}
   m_CullTransparentMesh: 1
---- !u!4 &1508036975 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-  m_PrefabInstance: {fileID: 809155337852496227}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1508677100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29207,15 +29201,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 4133950998697538046}
-  m_TeleportInteractor: {fileID: 4786390515500897314}
-  m_TeleportMode: {fileID: 1263111715868034790, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_TeleportModeCancel: {fileID: 737890489006591557, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Turn: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SnapTurn: {fileID: -7374733323251553461, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Move: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_UIScroll: {fileID: 2464016903823916871, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SmoothMotionEnabled: 1
+  m_NearFarInteractor: {fileID: 0}
+  m_TeleportInteractor: {fileID: 0}
+  m_TeleportMode: {fileID: 0}
+  m_TeleportModeCancel: {fileID: 0}
+  m_Turn: {fileID: 0}
+  m_SnapTurn: {fileID: 0}
+  m_Move: {fileID: 0}
+  m_UIScroll: {fileID: 0}
+  m_SmoothMotionEnabled: 0
   m_SmoothTurnEnabled: 0
   m_NearFarEnableTeleportDuringNearInteraction: 1
   m_UIScrollingEnabled: 1
@@ -29355,7 +29349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5f76f9ea8c80547973ab01877f9567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ThumbstickTransform: {fileID: 7206581308347788685}
+  m_ThumbstickTransform: {fileID: 0}
   m_StickRotationRange: {x: 30, y: 30}
   m_StickInput:
     m_InputSourceMode: 2
@@ -29363,15 +29357,15 @@ MonoBehaviour:
       m_Name: Thumbstick
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 8a80d2d1-54ab-40f3-ae58-acd679e9f63f
+      m_Id: 6ff8d1b3-03ef-4376-8244-2d79be800b35
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -8666952849799569744, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
-  m_TriggerTransform: {fileID: 833225753639679532}
+  m_TriggerTransform: {fileID: 0}
   m_TriggerXAxisRotationRange: {x: 0, y: -15}
   m_TriggerInput:
     m_InputSourceMode: 2
@@ -29379,15 +29373,15 @@ MonoBehaviour:
       m_Name: Trigger
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 594965ae-7ab6-4c16-889f-f371fa785459
+      m_Id: 998f89a5-23f5-49a6-a233-ae2287914fc7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: 0
-  m_GripTransform: {fileID: 1535558802624962848}
+  m_GripTransform: {fileID: 0}
   m_GripRightRange: {x: -0.0125, y: -0.011}
   m_GripInput:
     m_InputSourceMode: 2
@@ -29395,12 +29389,12 @@ MonoBehaviour:
       m_Name: Grip
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 615b1144-610d-48ff-a7ed-4f4447f2ed86
+      m_Id: 9cf3ef19-fc3e-484f-a76b-7964656f72e2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: 0
 --- !u!114 &152231454489163363
@@ -30286,7 +30280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865d01d2834c9cb4caa8f2c901104c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AffordanceStateProvider: {fileID: 5153799143172389028}
+  m_AffordanceStateProvider: {fileID: 0}
   m_ReplaceIdleStateValueWithInitialValue: 0
   m_AffordanceThemeDatum:
     m_UseConstant: 0
@@ -30382,7 +30376,7 @@ MonoBehaviour:
           x: 0
           y: 0
           z: 0
-    m_Variable: {fileID: 11400000, guid: 2826cece951f71642a19da5a2080a27c, type: 2}
+    m_Variable: {fileID: 0}
   m_ValueUpdated:
     m_PersistentCalls:
       m_Calls: []
@@ -31150,67 +31144,6 @@ MonoBehaviour:
       m_Calls: []
   m_SkinnedMeshRenderer: {fileID: 2569297105399950827}
   m_BlendShapeIndex: 0
---- !u!1001 &809155337852496227
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 817075156}
-    m_Modifications:
-    - target: {fileID: 7666611877484744202, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_Name
-      value: Blaster
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.707
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.303
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8660254
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 9210690801452922557, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ecbf6d1d3a7091b4bbdbc934b3c89fb9, type: 3}
 --- !u!4 &820096877477733076
 Transform:
   m_ObjectHideFlags: 0
@@ -31356,14 +31289,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 6363092859342548833}
-  m_TeleportInteractor: {fileID: 7175299340573323323}
-  m_TeleportMode: {fileID: -8061240218431744966, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_TeleportModeCancel: {fileID: 2307464322626738743, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Turn: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_SnapTurn: {fileID: -8525429354371678379, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_Move: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  m_UIScroll: {fileID: -6756787485274679044, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  m_NearFarInteractor: {fileID: 0}
+  m_TeleportInteractor: {fileID: 0}
+  m_TeleportMode: {fileID: 0}
+  m_TeleportModeCancel: {fileID: 0}
+  m_Turn: {fileID: 0}
+  m_SnapTurn: {fileID: 0}
+  m_Move: {fileID: 0}
+  m_UIScroll: {fileID: 0}
   m_SmoothMotionEnabled: 0
   m_SmoothTurnEnabled: 0
   m_NearFarEnableTeleportDuringNearInteraction: 1
@@ -31459,86 +31392,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AimFlagsAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
-      m_Name: Aim Flags
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: Integer
-      m_Id: 5a4fce95-4f7e-4130-b323-a6ab97b798b3
+      m_Id: bf77673f-77e3-4a0a-b680-5bd2e5676cc4
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 3270634481770055383, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   m_SystemGestureStarted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1714070883514564629}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7463778923719686626}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SystemGestureEnded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1714070883514564629}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 7463778923719686626}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_MenuPressed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3716601380114732727}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1104092461515988785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33870,8 +33743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e989a75b2954bdab01ca618a30d5de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Interactor: {fileID: 7868745572692796339}
-  m_ObjectToHide: {fileID: 7807897610406517967}
+  m_Interactor: {fileID: 0}
+  m_ObjectToHide: {fileID: 0}
 --- !u!4 &1654273991283366746
 Transform:
   m_ObjectHideFlags: 0
@@ -34177,10 +34050,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8693657abb5062a40a80ba3cb86ef181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_XRHandTrackingEvents: {fileID: 3349769181575880536}
+  m_XRHandTrackingEvents: {fileID: 0}
   m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 7868745572692796339}
-  m_TargetRotation: {fileID: 4397614841786600294}
+  m_NearFarInteractor: {fileID: 0}
+  m_TargetRotation: {fileID: 0}
   m_RotationSmoothingSpeed: 12
 --- !u!4 &1829840650772429465
 Transform:
@@ -37252,86 +37125,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AimFlagsAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
-      m_Name: Aim Flags
+      m_Name: 
       m_Type: 0
       m_ExpectedControlType: Integer
-      m_Id: 5a4fce95-4f7e-4130-b323-a6ab97b798b3
+      m_Id: 37e0b51f-3fe0-4991-8365-02671e435690
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -6595512345416212934, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: 0}
   m_SystemGestureStarted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4277267431163489310}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 548751419177339099}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_SystemGestureEnded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4277267431163489310}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 548751419177339099}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_MenuPressed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5970921987814187695}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &2774220344422390532
 Transform:
   m_ObjectHideFlags: 0
@@ -43115,25 +42928,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b1e8c997df241c1a67045eeac79b41b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mediator: {fileID: 2182745646303912305}
+  m_Mediator: {fileID: 0}
   m_TransformationPriority: 0
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 1
   m_InAirControlModifier: 0.5
   m_EnableStrafe: 1
   m_EnableFly: 0
-  m_ForwardSource: {fileID: 4786390516147574872}
+  m_ForwardSource: {fileID: 0}
   m_LeftHandMoveInput:
     m_InputSourceMode: 2
     m_InputAction:
       m_Name: Left Hand Move
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 16c2fabb-fb1c-4a11-94d0-0b1d894b8593
+      m_Id: 37fa3a23-6caf-4a46-a010-3d6a96bed415
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
   m_RightHandMoveInput:
@@ -43142,18 +42955,18 @@ MonoBehaviour:
       m_Name: Right Hand Move
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: af2e3d83-024e-4a1f-8bc1-f97f0b4ae1d5
+      m_Id: 57d8429f-aa92-4a6a-9a16-b4ca494779ce
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
   m_UseGravity: 1
-  m_HeadTransform: {fileID: 4786390516147574872}
-  m_LeftControllerTransform: {fileID: 4786390516597831738}
-  m_RightControllerTransform: {fileID: 4786390516253948123}
+  m_HeadTransform: {fileID: 0}
+  m_LeftControllerTransform: {fileID: 0}
+  m_RightControllerTransform: {fileID: 0}
   m_LeftHandMovementDirection: 0
   m_RightHandMovementDirection: 0
 --- !u!4 &4645796627760428241
@@ -45013,8 +44826,8 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   m_InvalidColorGradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 0.5882353}
-    key1: {r: 1, g: 0, b: 0, a: 0.5882353}
+    key0: {r: 1, g: 1, b: 1, a: 0.5882353}
+    key1: {r: 1, g: 1, b: 1, a: 0.5882353}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -45038,7 +44851,7 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_ColorSpace: -1
+    m_ColorSpace: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   m_BlockedColorGradient:
@@ -46074,39 +45887,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbac611a2982409ab5f5e604f53bcad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Handedness: 2
+  m_Handedness: 0
   m_PokeGestureStarted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7868745572692796339}
-        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor,
-          Unity.XR.Interaction.Toolkit
-        m_MethodName: set_enableFarCasting
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_PokeGestureEnded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7868745572692796339}
-        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor,
-          Unity.XR.Interaction.Toolkit
-        m_MethodName: set_enableFarCasting
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5107938897183765493
 GameObject:
   m_ObjectHideFlags: 0
@@ -47088,7 +46875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865d01d2834c9cb4caa8f2c901104c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AffordanceStateProvider: {fileID: 1605818171369068776}
+  m_AffordanceStateProvider: {fileID: 0}
   m_ReplaceIdleStateValueWithInitialValue: 0
   m_AffordanceThemeDatum:
     m_UseConstant: 0
@@ -47184,7 +46971,7 @@ MonoBehaviour:
           x: 0
           y: 0
           z: 0
-    m_Variable: {fileID: 11400000, guid: 2826cece951f71642a19da5a2080a27c, type: 2}
+    m_Variable: {fileID: 0}
   m_ValueUpdated:
     m_PersistentCalls:
       m_Calls: []
@@ -49024,10 +48811,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8693657abb5062a40a80ba3cb86ef181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_XRHandTrackingEvents: {fileID: 7611112325411705702}
+  m_XRHandTrackingEvents: {fileID: 0}
   m_RayInteractor: {fileID: 0}
-  m_NearFarInteractor: {fileID: 2827774052862950558}
-  m_TargetRotation: {fileID: 4989395364358152435}
+  m_NearFarInteractor: {fileID: 0}
+  m_TargetRotation: {fileID: 0}
   m_RotationSmoothingSpeed: 12
 --- !u!4 &6324155100684738530
 Transform:
@@ -49430,8 +49217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e989a75b2954bdab01ca618a30d5de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Interactor: {fileID: 2827774052862950558}
-  m_ObjectToHide: {fileID: 2469046224998710391}
+  m_Interactor: {fileID: 0}
+  m_ObjectToHide: {fileID: 0}
 --- !u!114 &6424964449174840163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51356,7 +51143,7 @@ MonoBehaviour:
       m_Name: Value
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: c31ad6e4-ecd9-4e94-8d50-bcb7e193b9f4
+      m_Id: 08d693da-2016-4b0e-a949-787d0bfb8245
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -51365,13 +51152,13 @@ MonoBehaviour:
       m_Name: Value Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 8e36200b-9f0d-48ce-a8a2-38e46eab9489
+      m_Id: 8eb31e8c-9355-410b-883e-6ed31f376b58
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: -6395602842196007441, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: 71106601250685021, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -51745,7 +51532,7 @@ MonoBehaviour:
       m_Name: Value
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 573218e1-1037-443b-b4e7-621bf6e32482
+      m_Id: 2f63b24c-3aff-450f-9621-f1fc6f582091
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -51754,13 +51541,13 @@ MonoBehaviour:
       m_Name: Value Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: fd259e71-bb9d-4042-83b0-5704f6c057c9
+      m_Id: b475373b-b9fd-4adb-8481-9504a3bf6780
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 3279264004350380116, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: -5908353012961274365, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -53008,7 +52795,7 @@ MonoBehaviour:
       m_Name: Value
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 10f0c96d-6c50-4214-b520-55ed10f0d86a
+      m_Id: a7d9b16b-ef58-4f7c-b7e5-ca8d9b5434fa
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -53017,13 +52804,13 @@ MonoBehaviour:
       m_Name: Value Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 1af57d1d-a16a-4f44-9f26-44d165b54d6a
+      m_Id: 26f90f9b-8a30-4119-9e5a-c50ba427daa1
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -53923,7 +53710,7 @@ MonoBehaviour:
     m_VignetteColorBlend: {r: 0, g: 0, b: 0, a: 1}
     m_ApertureVerticalPosition: 0
   m_LocomotionVignetteProviders:
-  - m_LocomotionProvider: {fileID: 4634099568254380779}
+  - m_LocomotionProvider: {fileID: 0}
     m_Enabled: 1
     m_OverrideDefaultParameters: 0
     m_OverrideParameters:
@@ -57437,7 +57224,7 @@ MonoBehaviour:
       m_Name: Value
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 8af5f191-8af9-4df3-a0eb-ab393e7026bf
+      m_Id: 43189f75-50bd-4a2f-8e3c-fef051bf59ef
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -57446,13 +57233,13 @@ MonoBehaviour:
       m_Name: Value Value
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 23ee9ba6-3999-4f3d-8189-277a6cf4cb42
+      m_Id: 07bb63d8-6aac-458f-bcb6-d8cac65ee27e
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReferencePerformed: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-    m_InputActionReferenceValue: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReferencePerformed: {fileID: 0}
+    m_InputActionReferenceValue: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualPerformed: 0
     m_ManualValue: 0
@@ -57475,23 +57262,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5f76f9ea8c80547973ab01877f9567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ThumbstickTransform: {fileID: 471723155916560979}
-  m_StickRotationRange: {x: 30, y: -30}
+  m_ThumbstickTransform: {fileID: 0}
+  m_StickRotationRange: {x: 30, y: 30}
   m_StickInput:
     m_InputSourceMode: 2
     m_InputAction:
       m_Name: Thumbstick
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 2f424cdc-fe47-4989-a9c2-6fa97f609e70
+      m_Id: 32891688-7884-4702-a1f0-bbc9025577e4
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -60998027439631388, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
-  m_TriggerTransform: {fileID: 7573146207914541554}
+  m_TriggerTransform: {fileID: 0}
   m_TriggerXAxisRotationRange: {x: 0, y: -15}
   m_TriggerInput:
     m_InputSourceMode: 2
@@ -57499,15 +57286,15 @@ MonoBehaviour:
       m_Name: Trigger
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: adbe6783-3cbb-48f7-8ad5-0b09a32b9943
+      m_Id: 97e190f3-ac29-4f0e-b8b8-21bff6837df3
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: 0
-  m_GripTransform: {fileID: 8630700819410245374}
+  m_GripTransform: {fileID: 0}
   m_GripRightRange: {x: -0.0125, y: -0.011}
   m_GripInput:
     m_InputSourceMode: 2
@@ -57515,12 +57302,12 @@ MonoBehaviour:
       m_Name: Grip
       m_Type: 0
       m_ExpectedControlType: Axis
-      m_Id: 7ddc77c6-8f81-4889-aaca-964286dbe1ea
+      m_Id: d977a3cd-30c1-426a-a480-7c3d76e3badd
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: 0
 --- !u!4 &8605452493678974436
@@ -58220,39 +58007,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbac611a2982409ab5f5e604f53bcad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Handedness: 1
+  m_Handedness: 0
   m_PokeGestureStarted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2827774052862950558}
-        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor,
-          Unity.XR.Interaction.Toolkit
-        m_MethodName: set_enableFarCasting
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_PokeGestureEnded:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2827774052862950558}
-        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.MultiCastInteractor.NearFarInteractor,
-          Unity.XR.Interaction.Toolkit
-        m_MethodName: set_enableFarCasting
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &8834806121974648679
 Transform:
   m_ObjectHideFlags: 0
@@ -59114,8 +58875,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e766f86cb7d2461683eb37d8a971fb14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ClimbTeleportInteractor: {fileID: 5252508899610713453}
-  m_PointerPrefab: {fileID: 5212361887338514247, guid: ae1968658b9687b47976fe86c062168f, type: 3}
+  m_ClimbTeleportInteractor: {fileID: 0}
+  m_PointerPrefab: {fileID: 0}
   m_PointerDistance: 0.3
 --- !u!4 &9151712089748063906
 Transform:
@@ -59146,14 +58907,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UseOptimizedControls: 0
-  m_LeftHandMesh: {fileID: 3554853006689801357}
-  m_RightHandMesh: {fileID: 4625840008390496443}
+  m_MetaQuestLeftHandMesh: {fileID: 0}
+  m_MetaQuestRightHandMesh: {fileID: 0}
+  m_AndroidXRLeftHandMesh: {fileID: 0}
+  m_AndroidXRRightHandMesh: {fileID: 0}
   m_HandMeshMaterial: {fileID: 0}
-  m_DrawMeshes: 1
-  m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868, type: 3}
+  m_DrawMeshes: 0
+  m_DebugDrawPrefab: {fileID: 0}
   m_DebugDrawJoints: 0
-  m_VelocityPrefab: {fileID: 8538602047018081646, guid: 629fd7882ec6bfc499a5fcf20035282b, type: 3}
-  m_VelocityType: 2
+  m_VelocityPrefab: {fileID: 0}
+  m_VelocityType: 0
 --- !u!1 &9170464566426798969
 GameObject:
   m_ObjectHideFlags: 0

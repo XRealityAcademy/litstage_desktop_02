@@ -26,6 +26,13 @@ public class Manager_Ch3 : MonoBehaviour
     [Tooltip("Optional per-line overrides. If <= 0, the defaultDelay is used.")]
     public float[] perLineDelays = new float[TOTAL];
 
+    [Header("Chapter 3 Props")]
+    [Tooltip("Chart visual that appears at index 7 and hides at index 9.")]
+    public GameObject chart;
+
+    [Tooltip("Number UI that appears at index 9.")]
+    public GameObject numberUI;
+
     [Header("UI")]
     [Tooltip("Shown when all lines have finished playing.")]
     public GameObject continueButton;
@@ -37,7 +44,7 @@ public class Manager_Ch3 : MonoBehaviour
     /*──────── Unity ─────────*/
     void Awake()
     {
-        // Basic validation
+        // Validation
         if (dialogClips == null || dialogClips.Length != TOTAL ||
             dialogLines == null || dialogLines.Length != TOTAL)
         {
@@ -49,13 +56,17 @@ public class Manager_Ch3 : MonoBehaviour
         if (perLineDelays == null || perLineDelays.Length != TOTAL)
             perLineDelays = new float[TOTAL];
 
-        // Audio source sensible defaults
+        // Audio defaults
         if (audioSource)
         {
             audioSource.playOnAwake = false;
             audioSource.loop = false;
             if (audioSource.volume <= 0f) audioSource.volume = 1f;
         }
+
+        // Ensure initial prop visibility (safe defaults)
+        if (chart) chart.SetActive(false);
+        if (numberUI) numberUI.SetActive(false);
     }
 
     void Start()
@@ -65,14 +76,12 @@ public class Manager_Ch3 : MonoBehaviour
     }
 
     /*──────── Public API ────*/
-    /// <summary>Plays a specific index immediately (useful for testing or branching).</summary>
     public void PlayDialogByIndex(int index)
     {
         if (index < 0 || index >= TOTAL) return;
         StartCoroutine(PlayLine(index));
     }
 
-    /// <summary>Stops any running autoplay.</summary>
     public void StopAutoplay()
     {
         if (autoplayRoutine != null)
@@ -90,7 +99,6 @@ public class Manager_Ch3 : MonoBehaviour
         {
             yield return PlayLine(i);
 
-            // Wait AFTER each line (except you can still wait after last if you want)
             float delay = perLineDelays[i] > 0f ? perLineDelays[i] : defaultDelay;
             if (delay > 0f && i < TOTAL - 1)
                 yield return new WaitForSeconds(delay);
@@ -101,14 +109,12 @@ public class Manager_Ch3 : MonoBehaviour
 
     IEnumerator PlayLine(int idx)
     {
-        // If you don’t want repeats, uncomment next line:
-        // if (played[idx]) yield break;
         played[idx] = true;
 
-        // Set UI text
+        // Text
         if (dialogText) dialogText.text = dialogLines[idx];
 
-        // Play audio (or fallback wait)
+        // Audio (or fallback)
         if (audioSource && dialogClips[idx])
         {
             audioSource.Stop();
@@ -118,17 +124,32 @@ public class Manager_Ch3 : MonoBehaviour
 
             float len = audioSource.clip.length;
             float t = 0f;
-            while (t < len)
-            {
-                t += Time.deltaTime;
-                yield return null;
-            }
+            while (t < len) { t += Time.deltaTime; yield return null; }
         }
         else
         {
-            // Fallback wait if clip missing
             Debug.LogWarning($"Manager_Ch3: Missing clip at index {idx}. Using 3s fallback.");
             yield return new WaitForSeconds(3f);
+        }
+
+        // Chapter-3 specific post-line actions
+        PostLineActions(idx);
+    }
+
+    void PostLineActions(int idx)
+    {
+        // 0–6 remain untouched by design
+
+        if (idx == 7)
+        {
+            // Show the chart
+            if (chart) chart.SetActive(true);
+        }
+        else if (idx == 9)
+        {
+            // Hide chart, show number UI
+            if (chart) chart.SetActive(false);
+            if (numberUI) numberUI.SetActive(true);
         }
     }
 }
