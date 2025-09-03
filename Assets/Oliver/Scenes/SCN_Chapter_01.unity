@@ -11474,7 +11474,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1382394166}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1382394165}
   m_SourcePrefab: {fileID: 100100000, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
 --- !u!1 &846733002
 GameObject:
@@ -18399,6 +18405,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371600110}
   m_CullTransparentMesh: 1
+--- !u!1 &1382394163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
+  m_PrefabInstance: {fileID: 844470573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1382394165
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382394163}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 898d20806b3ea5345b83c4d3260e6399, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1382394166
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382394163}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 1827226128182048838, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1 &1392268946
 GameObject:
   m_ObjectHideFlags: 0
@@ -30151,7 +30200,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -64892,10 +64941,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UseOptimizedControls: 0
-  m_MetaQuestLeftHandMesh: {fileID: 3554853006689801357}
-  m_MetaQuestRightHandMesh: {fileID: 4625840008390496443}
-  m_AndroidXRLeftHandMesh: {fileID: 0}
-  m_AndroidXRRightHandMesh: {fileID: 0}
+  m_LeftHandMesh: {fileID: 0}
+  m_RightHandMesh: {fileID: 0}
   m_HandMeshMaterial: {fileID: 0}
   m_DrawMeshes: 1
   m_DebugDrawPrefab: {fileID: 6507399986997092475, guid: 254b742d65a15d14b9df756ae77de868, type: 3}
