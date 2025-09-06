@@ -13128,15 +13128,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.942
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.259
+      value: 1.142
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.762
+      value: -1.845
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13814,27 +13814,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.17
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.72
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.85
+      value: -4.28
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb1a33b975fd0c944b877c90e604bffd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17176,15 +17176,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.29099998
+      value: 0.31900004
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.196
+      value: 1.079
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.742
+      value: -1.825
       objectReference: {fileID: 0}
     - target: {fileID: 7785151267686525226, guid: 048249d9a15aa3c459399751e860bde7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -28387,7 +28387,7 @@ Transform:
   m_GameObject: {fileID: 2046629158}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: -0.02000004, z: -0.9000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29353,15 +29353,15 @@ MonoBehaviour:
   dialogClips:
   - {fileID: 8300000, guid: fd38ca18333c28442b97afd91155eb78, type: 3}
   - {fileID: 8300000, guid: a34f51538c3b47a4e9f4f46add1db7e9, type: 3}
-  - {fileID: 8300000, guid: 14be3252638fa7b468f8e29efd0efbb7, type: 3}
-  - {fileID: 8300000, guid: b301baff6f4be2b459a0955713412595, type: 3}
+  - {fileID: 8300000, guid: 11d077ea9d829f2419835264d813e28a, type: 3}
+  - {fileID: 8300000, guid: 1705802919ddd1249b8aa9d6f30e1e2c, type: 3}
   - {fileID: 8300000, guid: 663adeb000429a64a94423001dfb21e3, type: 3}
   - {fileID: 8300000, guid: 92bce23831cca1841b021697cb55ca2e, type: 3}
   - {fileID: 8300000, guid: 7d04ef4690bcd4845a851eefb25ec6ae, type: 3}
   - {fileID: 8300000, guid: e707c738421a7c14995457a2d49a2afe, type: 3}
   - {fileID: 8300000, guid: d43d2e0562104be4ba4556bbad7042a7, type: 3}
-  - {fileID: 8300000, guid: 9335f29ebec1d124dac421130effc2cb, type: 3}
-  - {fileID: 8300000, guid: 3c9faab381155d54ea6a2c13be7a253b, type: 3}
+  - {fileID: 8300000, guid: 85f8982d9251aea48a6926528c3b4706, type: 3}
+  - {fileID: 8300000, guid: e6190cfa5f7649747be7d2c01fcc8356, type: 3}
   - {fileID: 8300000, guid: 0927cedfd1890e247ac14c2205e7919f, type: 3}
   - {fileID: 8300000, guid: 1e0d4f246cff60a40a1a5cf88823cf05, type: 3}
   - {fileID: 8300000, guid: f824015212d4b2748a367354303a35f6, type: 3}
@@ -29382,7 +29382,7 @@ MonoBehaviour:
   - "I\u2019m Lula. It\u2019s good to see you here."
   - "I\u2019ve stumbled upon this mysterious substance here in the Amazon, and need
     help testing it\u2019s properties."
-  - "Let\u2019s head over to the workstation on the right, so I can show you."
+  - "Let\u2019s head over to the workstation in the front, so I can show you."
   - So, here are our tools. You can grab some tools and familiarize yourself with
     them.
   - There are six pots with soil.
@@ -29398,9 +29398,10 @@ MonoBehaviour:
     time has passed."
   - "That's a watering can! Now that you\u2019ve familiarized yourself with our tools,
     let\u2019s start the experiment!"
-  - Now, pick up the seeds from the table and place one in each pot.
+  - Pick up the seeds, place one in each pot, then grab the watering can and water
+    the plants.
   - Great! You made it!
-  - Grab the watering can, and then  water the plants.
+  - 
   - "Great job! Now, let\u2019s learn how to form our first hypothesis."
   - Science is built on observation and measurement
   - 'The scientific method generally consists of 4 steps:'
@@ -29444,11 +29445,11 @@ MonoBehaviour:
   - 12
   - 12
   - 12
-  - 3
-  - 25
-  - 8
   - 5
-  - 3
+  - 25
+  - 5
+  - 5
+  - 5
   continueButton: {fileID: 3409566789716954863}
 --- !u!4 &2109911001
 Transform:
@@ -46259,8 +46260,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -59922,8 +59923,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1067544257}
-  - {fileID: 6177753701371478276}
   - {fileID: 2046629159}
+  - {fileID: 6177753701371478276}
   - {fileID: 2109911001}
   - {fileID: 1783572214}
   - {fileID: 1565887663878291441}
