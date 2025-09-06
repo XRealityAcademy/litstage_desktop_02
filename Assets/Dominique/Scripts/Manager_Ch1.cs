@@ -6,7 +6,7 @@ using TMPro;
 public class Manager_Ch1 : MonoBehaviour
 {
     /*──────── Tunables ───────────*/
-    private const int TOTAL = 26;                        // 0..25
+    private const int TOTAL = 25;                        // 0..25
     [Range(1, 10)] public int firstAutoCount = 4;        // autoplay at start
 
     [Header("Gameplay Gating")]

@@ -29363,7 +29363,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 85f8982d9251aea48a6926528c3b4706, type: 3}
   - {fileID: 8300000, guid: e6190cfa5f7649747be7d2c01fcc8356, type: 3}
   - {fileID: 8300000, guid: 0927cedfd1890e247ac14c2205e7919f, type: 3}
-  - {fileID: 8300000, guid: 1e0d4f246cff60a40a1a5cf88823cf05, type: 3}
   - {fileID: 8300000, guid: f824015212d4b2748a367354303a35f6, type: 3}
   - {fileID: 8300000, guid: 65ede1e2cdc343c49ba57126a6707cad, type: 3}
   - {fileID: 8300000, guid: a6123289d34b7974393da7744ab99c89, type: 3}
@@ -29386,8 +29385,8 @@ MonoBehaviour:
   - So, here are our tools. You can grab some tools and familiarize yourself with
     them.
   - There are six pots with soil.
-  - "Ah! Yes! That is the mysterious substance I found here in the Amazon. I\u2019m
-    keen to see its properties."
+  - "Yes! That is the mysterious substance I found here in the Amazon. I\u2019m keen
+    to see its properties."
   - 'The passionflower is a tropical climbing plant with stunning,
 
     intricate
@@ -29401,7 +29400,6 @@ MonoBehaviour:
   - Pick up the seeds, place one in each pot, then grab the watering can and water
     the plants.
   - Great! You made it!
-  - 
   - "Great job! Now, let\u2019s learn how to form our first hypothesis."
   - Science is built on observation and measurement
   - 'The scientific method generally consists of 4 steps:'
@@ -29426,30 +29424,30 @@ MonoBehaviour:
   delayAfterLine:
   - 2
   - 2
+  - 5
+  - 4
+  - 5
+  - 3
+  - 5
+  - 6
+  - 5
+  - 6
+  - 4
+  - 5
   - 2
+  - 4
   - 3
+  - 4
+  - 9
+  - 7
+  - 7
+  - 6
+  - 4
+  - 14
   - 3
   - 3
   - 5
-  - 5
   - 3
-  - 5
-  - 1
-  - 1
-  - 1
-  - 3
-  - 3
-  - 3
-  - 3
-  - 12
-  - 12
-  - 12
-  - 12
-  - 5
-  - 25
-  - 5
-  - 5
-  - 5
   continueButton: {fileID: 3409566789716954863}
 --- !u!4 &2109911001
 Transform:
