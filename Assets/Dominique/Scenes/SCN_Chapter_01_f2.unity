@@ -12374,7 +12374,7 @@ GameObject:
   - component: {fileID: 953846850}
   m_Layer: 0
   m_Name: teapot pour
-  m_TagString: Untagged
+  m_TagString: WaterCanTip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26627,7 +26627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5363d4807a4dfe4b925820687bedaf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogIndex: 13
+  dialogIndex: 11
   manager: {fileID: 2109911000}
   playerTag: Player
   oneShot: 1
@@ -29360,7 +29360,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d04ef4690bcd4845a851eefb25ec6ae, type: 3}
   - {fileID: 8300000, guid: e707c738421a7c14995457a2d49a2afe, type: 3}
   - {fileID: 8300000, guid: d43d2e0562104be4ba4556bbad7042a7, type: 3}
-  - {fileID: 8300000, guid: 85f8982d9251aea48a6926528c3b4706, type: 3}
+  - {fileID: 8300000, guid: 3e8d0e4e61f2c03468f393cd9974af7c, type: 3}
   - {fileID: 8300000, guid: e6190cfa5f7649747be7d2c01fcc8356, type: 3}
   - {fileID: 8300000, guid: 0927cedfd1890e247ac14c2205e7919f, type: 3}
   - {fileID: 8300000, guid: f824015212d4b2748a367354303a35f6, type: 3}
@@ -29447,7 +29447,6 @@ MonoBehaviour:
   - 3
   - 3
   - 5
-  - 3
   continueButton: {fileID: 3409566789716954863}
 --- !u!4 &2109911001
 Transform:
