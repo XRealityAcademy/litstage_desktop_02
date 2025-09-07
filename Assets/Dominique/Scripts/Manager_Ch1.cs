@@ -6,7 +6,7 @@ using TMPro;
 public class Manager_Ch1 : MonoBehaviour
 {
     /*──────── Tunables ───────────*/
-    private const int TOTAL = 26;                        // 0..25
+    private const int TOTAL = 25;                        // 0...24
     [Range(1, 10)] public int firstAutoCount = 4;        // autoplay at start
 
     [Header("Gameplay Gating")]
@@ -41,23 +41,25 @@ public class Manager_Ch1 : MonoBehaviour
     public TMP_Text dialogText;
     public AudioSource audioSource;
 
-    [Header("Dialog Content (exactly 26)")]
+    [Header("Dialog Content (exactly 25)")]
     public AudioClip[] dialogClips = new AudioClip[TOTAL];
     public string[] dialogLines = new string[TOTAL];
 
     [Header("Per-Dialog Delays (seconds)")]
-    [Tooltip("Delay after each dialog index before the next one plays (size = 26).")]
+    [Tooltip("Delay after each dialog index before the next one plays (size = 25).")]
     public float[] delayAfterLine = new float[TOTAL];
 
     public GameObject continueButton;
     readonly bool[] played = new bool[TOTAL];
+    bool waterDoneEarly = false; // remembers if watering happened before we started waitingForWater
+
 
     /*──────── Progress State ─────*/
     int seedsPlacedCount = 0;            // legacy counter (kept but unused in strict mode)
     bool waitingForSeeds = false;        // becomes true after index 10 finishes
     bool waitingForWater = false;        // becomes true after index 12 finishes
-    bool index11Queued = false;
-    bool index12Queued = false;
+
+
 
     /* === Track unique pots that received their first seed === */
     readonly HashSet<SeedPotTrigger> uniqueSeededPots = new HashSet<SeedPotTrigger>();
@@ -65,6 +67,7 @@ public class Manager_Ch1 : MonoBehaviour
     /*──────── Constants ───────────*/
     static readonly Color Pink = ParseHex("#FF0047");
     const float ActiveWidth = 10f, HiddenWidth = 0f;
+    int nextAllowedIndex = 0;
 
     /*──────── Unity ───────────────*/
     void Awake()
@@ -136,7 +139,15 @@ public class Manager_Ch1 : MonoBehaviour
             if (uniqueSeededPots.Count >= requiredSeedPots)  // typically 6
             {
                 waitingForSeeds = false;
-                TriggerIndex11Then12(); // plays 11; schedules 12 after 11
+                waitingForWater = true;   // switch to watering phase; do not play 11 yet
+
+                // If the player already watered early, honor it now.
+                if (waterDoneEarly)
+                {
+                    waterDoneEarly = false;
+                    waitingForWater = false;
+                    TryPlay(11);
+                }
             }
         }
     }
@@ -144,9 +155,16 @@ public class Manager_Ch1 : MonoBehaviour
     /// Watering done (kept API). Called by WateringZoneTrigger below.
     public void NotifyWateringDone()
     {
-        if (!waitingForWater) return;
-        waitingForWater = false;
-        TryPlay(13); // jump to index 13
+        if (waitingForWater)
+        {
+            waitingForWater = false;
+            TryPlay(11); // jump to index 11
+        }
+        else
+        {
+            // Watering came early; remember it so seeding completion can advance to 11
+            waterDoneEarly = true;
+        }
     }
 
     /*──────── Collision Hooks ─────*/
@@ -166,6 +184,13 @@ public class Manager_Ch1 : MonoBehaviour
     /*──────── Internals ──────────*/
     void TryPlay(int idx)
     {
+        // NEW: block out-of-order jumps (e.g., 8->13 or 10->13)
+        if (idx > nextAllowedIndex)
+        {
+            Debug.Log($"Manager_Ch1: Blocking out-of-order request for {idx}. Next allowed is {nextAllowedIndex}.");
+            return;
+        }
+
         if (idx < 0 || idx >= played.Length || played[idx]) return;
 
         // Show corresponding item outline for Dialog 5–10 (indices 4..9)
@@ -189,6 +214,7 @@ public class Manager_Ch1 : MonoBehaviour
     IEnumerator PlayLine(int idx)
     {
         played[idx] = true;
+        if (idx + 1 > nextAllowedIndex) nextAllowedIndex = idx + 1;
 
         if (dialogText) dialogText.text = dialogLines[idx];
 
@@ -214,9 +240,14 @@ public class Manager_Ch1 : MonoBehaviour
             yield return new WaitForSeconds(delayAfterLine[idx]);
 
         // ====== Post-line gating / ordering ======
-        if (idx == 9)
+        if (idx == 8)
         {
-            StartCoroutine(PlayAfterDelay(10, Mathf.Max(0f, delayAfterLine[9])));
+            // NEW: ensure 8 -> 9 happens in order
+            StartCoroutine(PlayAfterDelay(9, 0f));
+        }
+        else if (idx == 9)
+        {
+            StartCoroutine(PlayAfterDelay(10, 0f));
         }
         else if (idx == 10)
         {
@@ -226,27 +257,39 @@ public class Manager_Ch1 : MonoBehaviour
             foreach (var p in seedPots)
                 if (p && p.IsSeeded) uniqueSeededPots.Add(p);
 
+            // If requirement already satisfied, switch immediately to watering phase
             if (uniqueSeededPots.Count >= requiredSeedPots)
             {
                 waitingForSeeds = false;
-                TriggerIndex11Then12();
+
             }
+             TryPlay(11);
+
+              //  waitingForWater = true;
+
+            // If watering happened early, advance now to 11
+            //     if (waterDoneEarly)
+            //     {
+            //         waterDoneEarly = false;
+            //         waitingForWater = false;
+            //         TryPlay(11);
+            //         yield break; // optional: stop further post-line logic
+            //     }
+            // }
+
+            // NEW: safety net — if both phases are already satisfied, advance to 11
+            // if (!waitingForSeeds && (!waitingForWater || waterDoneEarly))
+            // {
+            //     waterDoneEarly = false;
+            //     waitingForWater = false;
+            //     TryPlay(11);
+            //     yield break; // optional
+            // }
         }
-        else if (idx == 11)
+        else if (idx >= 11 && idx < TOTAL - 1)
         {
-            if (!index12Queued)
-            {
-                index12Queued = true;
-                StartCoroutine(PlayAfterDelay(12, Mathf.Max(0f, delayAfterLine[11])));
-            }
-        }
-        else if (idx == 12)
-        {
-            waitingForWater = true;
-        }
-        else if (idx == 13)
-        {
-            StartCoroutine(AutoPlayFrom13());
+            // After idx finishes (and its delay runs), queue the next index
+            StartCoroutine(PlayAfterDelay(idx + 1, 0f)); // no second delay
         }
 
         if (idx == TOTAL - 1 && continueButton) continueButton.SetActive(true);
@@ -258,14 +301,8 @@ public class Manager_Ch1 : MonoBehaviour
         TryPlay(index);
     }
 
-    void TriggerIndex11Then12()
-    {
-        if (!index11Queued)
-        {
-            index11Queued = true;
-            TryPlay(11);
-        }
-    }
+
+
 
     /*──────── Outline helpers ────*/
     void SwitchOutline(int newIndex)
@@ -310,13 +347,5 @@ public class Manager_Ch1 : MonoBehaviour
         }
     }
 
-    IEnumerator AutoPlayFrom13()
-    {
-        for (int i = 14; i < TOTAL; i++)
-        {
-            yield return new WaitForSeconds(Mathf.Max(0f, delayAfterLine[i]));
-            TryPlay(i);
-            while (!played[i]) yield return null;
-        }
-    }
+
 }
