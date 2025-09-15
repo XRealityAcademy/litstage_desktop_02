@@ -36,6 +36,9 @@ public class Manager_Ch3 : MonoBehaviour
     [Header("UI")]
     [Tooltip("Shown when all lines have finished playing.")]
     public GameObject continueButton;
+    
+    [Tooltip("Shown at index 11.")]
+    public GameObject continueButtonIndex11;
 
     /*──────── Internals ─────*/
     readonly bool[] played = new bool[TOTAL];
@@ -67,6 +70,7 @@ public class Manager_Ch3 : MonoBehaviour
         // Ensure initial prop visibility (safe defaults)
         if (chart) chart.SetActive(false);
         if (numberUI) numberUI.SetActive(false);
+        if (continueButtonIndex11) continueButtonIndex11.SetActive(false);
     }
 
     void Start()
@@ -150,6 +154,17 @@ public class Manager_Ch3 : MonoBehaviour
             // Hide chart, show number UI
             if (chart) chart.SetActive(false);
             if (numberUI) numberUI.SetActive(true);
+        }
+        else if (idx == 11)
+        {
+            // Show continue button at index 11
+            if (continueButtonIndex11) continueButtonIndex11.SetActive(true);
+        }
+        else if (idx == 12)
+        {
+            // Hide NumberUI and Chart at index 12
+            if (numberUI) numberUI.SetActive(false);
+            if (chart) chart.SetActive(false);
         }
     }
 }
