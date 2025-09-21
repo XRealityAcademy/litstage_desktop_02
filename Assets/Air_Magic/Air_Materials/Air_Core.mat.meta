@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 84e985e9036f2b74dab67cd96c53635d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 315931
+  packageName: Air Magic
+  packageVersion: 1.0
+  assetPath: Assets/Air_Magic/Air_Materials/Air_Core.mat
+  uploadId: 745563

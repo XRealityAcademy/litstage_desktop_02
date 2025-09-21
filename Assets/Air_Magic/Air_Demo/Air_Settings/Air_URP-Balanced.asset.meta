@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 22fd3cd72d27e47449d164e7c0d61209
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 315931
+  packageName: Air Magic
+  packageVersion: 1.0
+  assetPath: Assets/Air_Magic/Air_Demo/Air_Settings/Air_URP-Balanced.asset
+  uploadId: 745563

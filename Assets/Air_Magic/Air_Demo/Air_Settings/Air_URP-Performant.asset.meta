@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8f1f1e716c2fe1d48830cc1c78a89b2c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 315931
+  packageName: Air Magic
+  packageVersion: 1.0
+  assetPath: Assets/Air_Magic/Air_Demo/Air_Settings/Air_URP-Performant.asset
+  uploadId: 745563
