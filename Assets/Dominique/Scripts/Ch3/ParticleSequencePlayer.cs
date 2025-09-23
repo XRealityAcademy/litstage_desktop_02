@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class ParticleSequencePlayer : MonoBehaviour
 {
+    public GameObject[] notGrowthItems;
+    public GameObject[] showItemsForData;
+    [Header("Pea Plant Objects")]
+    [Tooltip("Assign 6 GameObject pea plants that will be activated when ParticleSystem indices 16-21 play.")]
+    public GameObject[] peaPlant = new GameObject[6];
     [Header("VFX (order matters)")]
     [Tooltip("Assign 12 ParticleSystem roots (their GameObjects will be toggled active/inactive).")]
     public ParticleSystem[] effects = new ParticleSystem[24];
@@ -13,6 +18,12 @@ public class ParticleSequencePlayer : MonoBehaviour
 
     [Tooltip("Music clip that will play once at the very start.")]
     public AudioClip bgmClip;
+
+    [Header("Sound Effects")]
+    [Tooltip("Audio clip that plays when each pea plant becomes active.")]
+    public AudioClip crystalBreak;
+    [Tooltip("Three wind clips that will play in order for non-plant effects.")]
+    public AudioClip[] windClips = new AudioClip[3];
 
     [Header("Behavior")]
     [Tooltip("Auto-run the full sequence on Start().")]
@@ -29,6 +40,7 @@ public class ParticleSequencePlayer : MonoBehaviour
 
     private Coroutine sequenceRoutine;
     private int currentIndex = -1;
+    private int nextWindClipIndex = 0;
 
     void Awake()
     {
@@ -48,6 +60,8 @@ public class ParticleSequencePlayer : MonoBehaviour
 
     void Start()
     {
+
+        HideNotGrowthItem();
         // Play BGM once at the very beginning
         if (bgmSource && bgmClip)
         {
@@ -56,7 +70,42 @@ public class ParticleSequencePlayer : MonoBehaviour
         }
 
         if (playOnStart)
+        {
             sequenceRoutine = StartCoroutine(PlaySequence());
+            
+        }
+           
+    }
+
+    public void HideNotGrowthItem()
+    {
+         if (notGrowthItems == null || notGrowthItems.Length == 0)
+        {
+            Debug.LogWarning("DisableNotGrowthItemsOnStart: No objects assigned to notGrowthItems array.");
+            return;
+        }
+
+        foreach (GameObject obj in notGrowthItems)
+        {
+            if (obj != null && obj.activeSelf)
+            {
+                obj.SetActive(false);
+            }
+        }  
+    }
+
+    public void ShowItemsForData()
+    {
+         if (notGrowthItems == null || notGrowthItems.Length == 0)
+        {
+            Debug.LogWarning("DisableNotGrowthItemsOnStart: No objects assigned to notGrowthItems array.");
+            return;
+        }
+
+        foreach (GameObject obj in notGrowthItems)
+        {                    
+                obj.SetActive(true);        
+        }  
     }
 
     public void PlayFromStart()
@@ -87,6 +136,7 @@ public class ParticleSequencePlayer : MonoBehaviour
 
         // Stop BGM too
         if (bgmSource) bgmSource.Stop();
+        
     }
 
     private IEnumerator PlaySequence()
@@ -98,6 +148,7 @@ public class ParticleSequencePlayer : MonoBehaviour
             yield return PlayAtIndex(i);
         }
 
+        ShowItemsForData();
         sequenceRoutine = null;
     }
 
@@ -125,6 +176,40 @@ public class ParticleSequencePlayer : MonoBehaviour
         ps.gameObject.SetActive(true);
         ps.Clear(true);
         ps.Play(true);
+
+        // Play wind clip for non plant indices
+        if (!(index >= 16 && index <= 21))
+        {
+            if (windClips != null && windClips.Length > 0)
+            {
+                if (nextWindClipIndex >= windClips.Length)
+                {
+                    nextWindClipIndex = 0;
+                }
+                var clip = windClips[nextWindClipIndex];
+                if (clip != null)
+                {
+                    AudioSource.PlayClipAtPoint(clip, ps.transform.position);
+                }
+                nextWindClipIndex++;
+            }
+        }
+
+        // Activate corresponding pea plant if index is between 16-21
+        if (index >= 16 && index <= 21)
+        {
+            int peaPlantIndex = index - 16;
+            if (peaPlant != null && peaPlantIndex < peaPlant.Length && peaPlant[peaPlantIndex] != null)
+            {
+                peaPlant[peaPlantIndex].SetActive(true);
+                
+                // Play crystal break sound when pea plant becomes active
+                if (crystalBreak != null)
+                {
+                    AudioSource.PlayClipAtPoint(crystalBreak, peaPlant[peaPlantIndex].transform.position);
+                }
+            }
+        }
 
         if (waitForEffectToFinish)
         {
