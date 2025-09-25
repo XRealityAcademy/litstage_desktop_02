@@ -70,7 +70,7 @@ public class Manager_Ch1 : MonoBehaviour
     int nextAllowedIndex = 0;
 
     /*──────── Unity ───────────────*/
-    void Awake()
+ void Awake()
     {
         outlines = new[] {
             potOutline, seedOutline, xOutline,
@@ -93,7 +93,7 @@ public class Manager_Ch1 : MonoBehaviour
         if (Mathf.Approximately(delayAfterLine[9], 0f)) delayAfterLine[9] = 1.0f;   // 9→10
         if (Mathf.Approximately(delayAfterLine[11], 0f)) delayAfterLine[11] = 5.0f; // 11→12
         for (int i = 14; i < TOTAL; i++)
-            if (Mathf.Approximately(delayAfterLine[i], 0f)) delayAfterLine[i] = 5.0f; // 14→25
+            if (Mathf.Approximately(delayAfterLine[i], 0f)) delayAfterLine[i] = 5.0f; // 14→24
 
         foreach (var o in outlines) if (o) SetOutlineHidden(o);
 
@@ -110,7 +110,6 @@ public class Manager_Ch1 : MonoBehaviour
         for (int i = 0; i < seedPots.Length; i++)
             if (seedPots[i]) seedPots[i].SetManager(this);
     }
-
     void Start()
     {
         continueButton?.SetActive(false);
@@ -147,6 +146,7 @@ public class Manager_Ch1 : MonoBehaviour
                     waterDoneEarly = false;
                     waitingForWater = false;
                     TryPlay(11);
+                   // yield break; // optional: stop further post-line logic
                 }
             }
         }
@@ -177,6 +177,7 @@ public class Manager_Ch1 : MonoBehaviour
         }
         else if (!string.IsNullOrEmpty(wateringTriggerTag) && other.CompareTag(wateringTriggerTag))
         {
+            // Keep this if you still use a tag-based watering zone
             NotifyWateringDone();
         }
     }
@@ -263,7 +264,7 @@ public class Manager_Ch1 : MonoBehaviour
                 waitingForSeeds = false;
 
             }
-             TryPlay(11);
+            // TryPlay(11);
 
               //  waitingForWater = true;
 
