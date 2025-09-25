@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1717cb1894ecbf0459ef44a684f0d51c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 315931
+  packageName: Air Magic
+  packageVersion: 1.0
+  assetPath: Assets/Air_Magic/Air_Prefab/VFX/VFX_Air_Projectile_base.prefab
+  uploadId: 745563

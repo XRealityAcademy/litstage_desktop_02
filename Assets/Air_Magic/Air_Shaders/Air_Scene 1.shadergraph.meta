@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8da2a0b0c770f274fbd0fceb46c3c3eb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 315931
+  packageName: Air Magic
+  packageVersion: 1.0
+  assetPath: Assets/Air_Magic/Air_Shaders/Air_Scene 1.shadergraph
+  uploadId: 745563

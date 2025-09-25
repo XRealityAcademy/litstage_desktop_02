@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d60969737eb724d4c8fb0a549c052e3c
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 315931
+  packageName: Air Magic
+  packageVersion: 1.0
+  assetPath: Assets/Air_Magic/Air_Prefab/VFX/VFX_Air_Airflow.prefab
+  uploadId: 745563

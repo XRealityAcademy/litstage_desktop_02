@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab102b5f9857f154ea74193f48b40610
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 315931
+  packageName: Air Magic
+  packageVersion: 1.0
+  assetPath: Assets/Air_Magic/Air_Prefab/VFX/VFX_Air_Wind.prefab
+  uploadId: 745563
