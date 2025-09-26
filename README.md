@@ -2,7 +2,7 @@
   <img src="https://litstage-images.s3.us-west-1.amazonaws.com/litstage_icon_green.png" alt="LitStage Logo" width="120" />
 </p>
 
-# LitStage VR Classroom
+# LitStage Desktop_02
 
 LitStage VR Classroom is an educational game designed to teach students different subjects using immersive VR games.  
 Our goal is to create interactive, engaging learning experiences that make education fun and accessible through virtual reality.
